@@ -1,0 +1,12 @@
+{
+		"title": "Iván Barcia",
+		"description": "Front-end Developer",
+    "url": "https://barcia.gal",
+    "version": "{{ pkg.version }}",
+    "author": {
+      "name": "Iván Barcia",
+      "email": "ivan@barcia.gal",
+      "github": "https://github.com/barcia",
+      "twitter": "https://twitter.com/bartzia"
+    }
+  }

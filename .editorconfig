@@ -8,7 +8,7 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{html,pug,php,xml,css,scss,sass,less,js}]
+[*.{html,pug,njk,php,xml,css,scss,sass,less,js}]
 indent_size = 2
 
 [*.{json}]

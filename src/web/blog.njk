@@ -1,0 +1,23 @@
+---
+title: Iván Barcia - Blog
+layout: layouts/base.njk
+---
+
+{% include "parts/nav.njk" %}
+
+<main>
+	<header>
+		<h1>Blog</h1>
+	</header>
+
+{% for post in collections.posts | reverse %}
+<a href="{{post.url}}">
+  <h3 class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+		{{ post.data.title }}
+		{{ post.data.tags }}
+  </h3>
+</a>
+{% endfor %}
+</main>
+
+{% include "parts/footer.njk" %}

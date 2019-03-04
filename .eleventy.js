@@ -1,10 +1,15 @@
 module.exports = function(eleventyConfig) {
     eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
-		eleventyConfig.addLayoutAlias('page', 'layouts/page.njk');
+		eleventyConfig.setDataDeepMerge(true);
 
 		eleventyConfig.setBrowserSyncConfig({
 			files: "dist/assets/**/*"
 		});
+
+		  // Get the first `n` elements of a collection.
+			eleventyConfig.addFilter("last", (array, n) => {
+					return array.slice(-n);
+			});
 
     return {
         dir: {

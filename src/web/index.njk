@@ -1,0 +1,27 @@
+---
+title: Iván Barcia
+layout: layouts/base.njk
+---
+
+{% include "parts/nav.njk" %}
+
+<main>
+	<header>
+		<h1>Iván Barcia</h1>
+		<h2>Web Designer & Developer</h2>
+	</header>
+
+	<section>
+		<h2>Últimos Artículos</h2>
+
+		{% set lastPost = collections.posts | last(2) %}
+		{% for post in lastPost | reverse %}
+		<div>
+			<a href="{{post.url}}"> {{ post.data.title }} </a>
+		</div>
+		{% endfor %}
+
+	</section>
+</main>
+
+{% include "parts/footer.njk" %}

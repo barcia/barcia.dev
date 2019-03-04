@@ -17,7 +17,7 @@ $color: (
 
 
 // Font types
-$fontFamily-sans-serif: "Open Sans", "Helvetica Neue", "Roboto", sans-serif;
+$fontFamily-sans-serif: "Overpass", "Helvetica Neue", "Roboto", sans-serif;
 $fontFamily-serif: serif;
 $fontFamily-monospace: "Hack", "Inconsolata", "Menlo", "Consolas", monospace;
 
@@ -34,7 +34,6 @@ $font: (
 
 // Font Sizes
 $weight: (
-	"light": 300,
 	"regular": 400,
 	"bold": 700,
 ) !default;

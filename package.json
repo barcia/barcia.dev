@@ -10,7 +10,7 @@
 	"author": "Iván Barcia <ivan@barcia.dev> (https://barcia.dev)",
 	"scripts": {
 		"start": "gulp watch & eleventy --serve",
-		"build": "gulp build & eleventy",
+		"build": "gulp build && eleventy",
 		"test": "gulp test"
 	},
 	"devDependencies": {

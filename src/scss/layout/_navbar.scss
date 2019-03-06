@@ -95,7 +95,7 @@
 	}
 
 	@include scrollDown {
-		transform: translateY(var(--Navbar-height));
+		transform: translateY(calc(var(--Navbar-height) * -1));
 	}
 }
 

@@ -1,5 +1,7 @@
 /* $CODE */
 
+@import 'code/light';
+
 // Typography
 pre,
 code,
@@ -22,6 +24,7 @@ code {
 
 // Preformatted
 pre {
+	@include textBlock(1em);
 	tab-size: 4;
 	padding: 10px;
 

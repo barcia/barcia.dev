@@ -1,0 +1,10 @@
+.page-home {
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - env(viewport-nav-resize));
+}
+
+.home-main {
+	@include backgroundImage("/assets/back.svg");
+	flex: 1;
+}

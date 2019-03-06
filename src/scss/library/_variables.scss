@@ -8,6 +8,7 @@ $textLineHeight: 1.5em;
 // Colors
 $color: (
 	"primary": $royal-blue,
+	"secondary": lightcoral,
 ) !default;
 
 @function color($key) {

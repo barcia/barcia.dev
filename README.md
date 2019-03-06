@@ -1,5 +1,6 @@
-# Bramework
-Web starter kit
+# Barcia.dev
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9d3ac719-7f44-4adb-a64b-70bd361a3f9d/deploy-status)](https://app.netlify.com/sites/barciadev/deploys)
+My website
 
 ## Description
 Bramework is a **web starter kit** to build simple websites. You can build only the assets or build full websites, also integrate it with other tools like [Eleventy](https://www.11ty.io) or [barcia/wp](https://github.com/barcia/wp).

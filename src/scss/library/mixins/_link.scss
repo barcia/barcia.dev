@@ -77,11 +77,14 @@
 		}
 	}
 
-	&:hover::after {
-		@if $axis == X or $axis == x {
-			transform: scaleX(1);
-		} @else {
-			transform: scaleY(1);
+	@include hoverFocus {
+		&::after {
+			@if $axis == X or $axis == x {
+				transform: scaleX(1);
+			} @else {
+				transform: scaleY(1);
+			}
 		}
 	}
+
 }

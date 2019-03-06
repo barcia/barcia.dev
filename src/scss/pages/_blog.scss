@@ -1,0 +1,92 @@
+.blog-content {
+	display: flex;
+	flex-direction: column;
+
+	@include from(medium) {
+		flex-direction: row;
+	}
+}
+
+.blog-postList {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	flex: 1;
+
+	&-item {
+		margin: 0;
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.blog-widgetArea {
+	min-width: 150px;
+
+}
+
+
+.blog {
+	&-post {
+		&-link {
+			@include voidLink;
+			@include fine {
+				@include underlineAnimation(x, color(secondary), 2px, time(normal));
+			}
+			@include coarse {
+				@include hoverFocusActive {
+					color: color(secondary);
+				}
+			}
+		}
+
+		&-title {
+			font-size: 1.5em;
+			margin-bottom: 0;
+			@include from(small) {
+				font-size: 2.2em;
+			}
+		}
+
+		&-metadata {
+			margin-top: 0px;
+			font-size: 0.95em;
+			color: $grey-400;
+		}
+
+		&-tagList {
+			@include inlineList;
+		}
+
+		&-tag {
+			&:not(:last-child) {
+				margin-right: 6px;
+			}
+
+			a {
+				@include voidLink;
+
+				&::before {
+					color: $grey-200;
+					content: "#";
+				}
+
+				@include hoverFocus {
+					&::before {
+						color: color(secondary);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.widget{
+	&-tagList {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+}

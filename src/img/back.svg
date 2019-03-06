@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="1440px" viewBox="0 0 1024 1440" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Desktop HD</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#A18CD1" offset="0%"></stop>
+            <stop stop-color="#FBC2EB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#A1C4FD" offset="0%"></stop>
+            <stop stop-color="#C2E9FB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FF9A9E" offset="0%"></stop>
+            <stop stop-color="#FAD0C4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#F9DE89" offset="0%"></stop>
+            <stop stop-color="#FCC5B4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#84FAB0" offset="0%"></stop>
+            <stop stop-color="#8FD3F4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <!-- <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> -->
+    <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"  fill-opacity="0.5">
+        <rect id="Rectangle" fill="url(#linearGradient-1)" transform="translate(111.000000, 104.000000) rotate(30.000000) translate(-111.000000, -104.000000) " x="96" y="89" width="30" height="30" rx="5"></rect>
+        <rect id="Rectangle-Copy" fill="url(#linearGradient-2)" transform="translate(877.371173, 227.371173) rotate(15.000000) translate(-877.371173, -227.371173) " x="862.371173" y="212.371173" width="30" height="30" rx="5"></rect>
+        <rect id="Rectangle-Copy-2" fill="url(#linearGradient-3)" transform="translate(706.890927, 584.890927) rotate(55.000000) translate(-706.890927, -584.890927) " x="691.890927" y="569.890927" width="30" height="30" rx="5"></rect>
+        <rect id="Rectangle-Copy-3" fill="url(#linearGradient-4)" transform="translate(207.000000, 602.000000) rotate(10.000000) translate(-207.000000, -602.000000) " x="192" y="587" width="30" height="30" rx="5"></rect>
+        <rect id="Rectangle-Copy-4" fill="url(#linearGradient-2)" transform="translate(116.000000, 1103.000000) rotate(-60.000000) translate(-116.000000, -1103.000000) " x="101" y="1088" width="30" height="30" rx="5"></rect>
+        <rect id="Rectangle-Copy-5" fill="url(#linearGradient-1)" transform="translate(775.000000, 1212.000000) rotate(-15.000000) translate(-775.000000, -1212.000000) " x="760" y="1197" width="30" height="30" rx="5"></rect>
+        <circle id="Circle" fill="url(#linearGradient-3)" cx="290" cy="60" r="15"></circle>
+        <circle id="Circle-Copy" fill="url(#linearGradient-1)" cx="635" cy="331" r="15"></circle>
+        <circle id="Circle-Copy-2" fill="url(#linearGradient-5)" cx="541" cy="860" r="15"></circle>
+        <path d="M239,197 C230.715729,197 224,190.284271 224,182 C224,173.715729 230.715729,167 239,167 C247.284271,167 254,173.715729 254,182 C254,190.284271 247.284271,197 239,197 Z M239,192 C244.522847,192 249,187.522847 249,182 C249,176.477153 244.522847,172 239,172 C233.477153,172 229,176.477153 229,182 C229,187.522847 233.477153,192 239,192 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+        <path d="M101,508 C92.7157288,508 86,501.284271 86,493 C86,484.715729 92.7157288,478 101,478 C109.284271,478 116,484.715729 116,493 C116,501.284271 109.284271,508 101,508 Z M101,503 C106.522847,503 111,498.522847 111,493 C111,487.477153 106.522847,483 101,483 C95.4771525,483 91,487.477153 91,493 C91,498.522847 95.4771525,503 101,503 Z" id="Combined-Shape-Copy" fill="url(#linearGradient-3)"></path>
+        <path d="M966,804 C957.715729,804 951,797.284271 951,789 C951,780.715729 957.715729,774 966,774 C974.284271,774 981,780.715729 981,789 C981,797.284271 974.284271,804 966,804 Z M966,799 C971.522847,799 976,794.522847 976,789 C976,783.477153 971.522847,779 966,779 C960.477153,779 956,783.477153 956,789 C956,794.522847 960.477153,799 966,799 Z" id="Combined-Shape-Copy-2" fill="url(#linearGradient-1)"></path>
+        <path d="M116,1392 C107.715729,1392 101,1385.28427 101,1377 C101,1368.71573 107.715729,1362 116,1362 C124.284271,1362 131,1368.71573 131,1377 C131,1385.28427 124.284271,1392 116,1392 Z M116,1387 C121.522847,1387 126,1382.52285 126,1377 C126,1371.47715 121.522847,1367 116,1367 C110.477153,1367 106,1371.47715 106,1377 C106,1382.52285 110.477153,1387 116,1387 Z" id="Combined-Shape-Copy-3" fill="url(#linearGradient-5)"></path>
+        <circle id="Circle-small" fill="url(#linearGradient-5)" cx="456.5" cy="189.5" r="7.5"></circle>
+        <circle id="Circle-small-Copy" fill="url(#linearGradient-4)" cx="344.5" cy="1237.5" r="7.5"></circle>
+        <circle id="Circle-small-Copy-2" fill="url(#linearGradient-2)" cx="329.5" cy="513.5" r="7.5"></circle>
+        <circle id="Circle-small-Copy-3" fill="url(#linearGradient-4)" cx="873.5" cy="536.5" r="7.5"></circle>
+        <circle id="Circle-small-Copy-4" fill="url(#linearGradient-4)" cx="714.5" cy="720.5" r="7.5"></circle>
+        <circle id="Circle-small-Copy-5" fill="url(#linearGradient-3)" cx="126.5" cy="882.5" r="7.5"></circle>
+        <circle id="Circle-small-Copy-6" fill="url(#linearGradient-1)" cx="602.5" cy="1080.5" r="7.5"></circle>
+        <circle id="Circle-small-Copy-7" fill="url(#linearGradient-2)" cx="858.5" cy="1321.5" r="7.5"></circle>
+        <circle id="Circle-small-Copy-8" fill="url(#linearGradient-5)" cx="541.5" cy="1314.5" r="7.5"></circle>
+        <polygon id="Triangle" fill="url(#linearGradient-4)" transform="translate(637.376839, 77.376839) rotate(-10.000000) translate(-637.376839, -77.376839) " points="637.376839 62.376839 652.376839 92.376839 622.376839 92.376839"></polygon>
+        <polygon id="Triangle-Copy" fill="url(#linearGradient-5)" transform="translate(292.000000, 367.000000) rotate(45.000000) translate(-292.000000, -367.000000) " points="292 352 307 382 277 382"></polygon>
+        <polygon id="Triangle-Copy-2" fill="url(#linearGradient-1)" transform="translate(456.000000, 572.000000) rotate(-30.000000) translate(-456.000000, -572.000000) " points="456 557 471 587 441 587"></polygon>
+        <polygon id="Triangle-Copy-3" fill="url(#linearGradient-3)" transform="translate(790.000000, 1043.000000) rotate(70.000000) translate(-790.000000, -1043.000000) " points="790 1028 805 1058 775 1058"></polygon>
+        <path d="M121,240 L131,240 L131,250 L121,250 L121,260 L111,260 L111,250 L101,250 L101,240 L111,240 L111,230 L121,230 L121,240 Z" id="Cross" fill="url(#linearGradient-4)" transform="translate(116.000000, 245.000000) rotate(12.000000) translate(-116.000000, -245.000000) "></path>
+        <path d="M698.213203,451.786797 L708.213203,451.786797 L708.213203,461.786797 L698.213203,461.786797 L698.213203,471.786797 L688.213203,471.786797 L688.213203,461.786797 L678.213203,461.786797 L678.213203,451.786797 L688.213203,451.786797 L688.213203,441.786797 L698.213203,441.786797 L698.213203,451.786797 Z" id="Cross-Copy" fill="url(#linearGradient-5)" transform="translate(693.213203, 456.786797) rotate(45.000000) translate(-693.213203, -456.786797) "></path>
+        <path d="M310.490381,804.490381 L320.490381,804.490381 L320.490381,814.490381 L310.490381,814.490381 L310.490381,824.490381 L300.490381,824.490381 L300.490381,814.490381 L290.490381,814.490381 L290.490381,804.490381 L300.490381,804.490381 L300.490381,794.490381 L310.490381,794.490381 L310.490381,804.490381 Z" id="Cross-Copy-2" fill="url(#linearGradient-2)" transform="translate(305.490381, 809.490381) rotate(-30.000000) translate(-305.490381, -809.490381) "></path>
+        <path d="M312,1068 L322,1068 L322,1078 L312,1078 L312,1088 L302,1088 L302,1078 L292,1078 L292,1068 L302,1068 L302,1058 L312,1058 L312,1068 Z" id="Cross-Copy-3" fill="url(#linearGradient-3)" transform="translate(307.000000, 1073.000000) rotate(70.000000) translate(-307.000000, -1073.000000) "></path>
+    </g>
+</svg>

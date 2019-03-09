@@ -3,7 +3,7 @@
 <head>
     {% include "parts/head.njk" %}
 </head>
-<body class="{{ pageClass }}">
+<body {% if title %}data-page="{{ title | slug}}"{% endif %}>
     {{ content | safe }}
 </body>
 </html>

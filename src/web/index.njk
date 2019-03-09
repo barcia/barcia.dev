@@ -1,14 +1,14 @@
 ---
-title: Iván Barcia
-layout: layouts/default.njk
-pageClass: page-home
+title: Home
+layout: layouts/base.njk
 ---
 
-<div class="wrapper">
-	<main class="home-main">
-		<header>
-			<h1>Iván Barcieaaaaaa</h1>
-			<h2>Web Designer & Developer</h2>
-		</header>
-	</main>
-</div>
+{% include "parts/nav.njk" %}
+
+<main class="home-wrapper">
+		<h1 class="home-name">Iván Barcia</h1>
+		<h2 class="home-work">Web Designer & Developer</h2>
+		<div class="home-interests">Interested in CSS, JavaScript, Design, UX, Product Development, and all about frontend stuff.</div>
+</main>
+
+{% include "parts/footer.njk" %}

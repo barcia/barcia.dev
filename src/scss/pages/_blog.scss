@@ -1,43 +1,21 @@
-.blog-content {
-	display: flex;
-	flex-direction: column;
-
-	@include from(medium) {
-		flex-direction: row;
-	}
-}
-
 .blog-postList {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	flex: 1;
+	@include genericList;
 
 	&-item {
-		margin: 0;
 		&:not(:last-child) {
 			margin-bottom: 40px;
 		}
 	}
 }
 
-.blog-widgetArea {
-	min-width: 150px;
-
-}
 
 
 .blog {
 	&-post {
 		&-link {
 			@include voidLink;
-			@include fine {
-				@include underlineAnimation(x, color(secondary), 2px, time(normal));
-			}
-			@include coarse {
-				@include hoverFocusActive {
-					color: color(secondary);
-				}
+			@include hoverFocusActive {
+				color: color(secondary);
 			}
 		}
 
@@ -83,10 +61,47 @@
 }
 
 
-.widget{
-	&-tagList {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
+
+.post {
+	&-title {
+		text-align: center;
+		font-size: 2em;
+		margin-bottom: 1em;
+		@include from(medium) {
+			font-size: 3em;
+		}
+	}
+
+	&-content {
+		font-size: 1.2em;
+
+		pre {
+			@include until(small) {
+				@include oversize($wrapper-margin-x);
+			}
+		}
+	}
+
+	&-footer {
+		display: flex;
+		flex-direction: column;
+		margin-top: 40px;
+		@include from(small) {
+			flex-direction: row;
+			margin-top: 60px;
+		}
+	}
+
+	&-metadata {
+		flex: 1;
+		margin-bottom: 30px;
+		color: $grey-400;
+		@include from(small) {
+			margin-bottom: 0;
+		}
+	}
+
+	&-comments {
+		text-align: center;
 	}
 }

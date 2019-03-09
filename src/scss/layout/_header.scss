@@ -1,1 +1,8 @@
 /* $HEADER */
+
+.page-title {
+	font-size: 3em;
+	@include from(medium) {
+		font-size: 5em;
+	}
+}

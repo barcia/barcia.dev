@@ -64,6 +64,15 @@
 
 
 
+// Styles for the item when page is not scrolled
+@mixin notScrolled {
+	[data-scrolled="false"] & {
+		@content;
+	}
+}
+
+
+
 // Styles for the item when is night
 @mixin night {
 	[data-night="true"] & {

@@ -1,0 +1,7 @@
+<article id="{{note.fileSlug}}" class="note">
+	<div>{{ note.templateContent | safe }}</div>
+	<div class="note-metadata">
+		<time class="note-date" datetime="{{ note.date | dateTo('iso') }}" title="{{ note.date | dateTo("dd LLLL, yyyy - HH:mm") }}">{{ note.date | dateTo("dd LLLL, yyyy") }}</time>
+		<a class="note-id" href="{{page.url}}#{{note.fileSlug}}">{{note.fileSlug}}</a>
+	</div>
+</article>

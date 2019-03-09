@@ -22,6 +22,17 @@
 }
 
 
+@mixin genericList {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+
+	li {
+		margin: 0;
+	}
+}
+
+
 
 // Helper to clear inner floats
 @mixin clearfix {

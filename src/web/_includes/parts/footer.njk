@@ -1,5 +1,23 @@
-<footer>
-	<nav>
-		<a href="/legal">legal</a>
+<footer class="footer">
+	<div class="footer-main">
+			<ul class="footer-sideProjects">
+				<li><a href="{{projects.bramework.repository}}" target="blank">{{projects.bramework.name}}</a></li>
+				<li><a href="{{projects.swibe.repository}}" target="blank">{{projects.swibe.name}}</a></li>
+				<li><a href="{{projects.standarize.repository}}" target="blank">{{projects.standarize.name}}</a></li>
+				<li><a href="{{projects.browserdom.repository}}" target="blank">{{projects.browserdom.name}}</a></li>
+			</ul>
+			<address class="footer-contact">
+				<a class="footer-contact-mail" href="mailto:ivan@barcia.dev" aria-label="Enviar email a {{metadata.author.name}}">ivan@barcia.dev</a>
+				<div>
+					<a class="footer-contact-social" href="{{metadata.author.github}}" aria-label="Perfíl de GitHub de {{metadata.author.name}}" title="Perfíl de GitHub de {{metadata.author.name}}" target="blank"><img src="/assets/github.svg" alt="Logotipo de GitHub"></a>
+					<a class="footer-contact-social" href="{{metadata.author.twitter}}" aria-label="Perfíl de Twitter de {{metadata.author.name}}" title="Perfíl de Twitter de {{metadata.author.name}}" target="blank"><img src="/assets/twitter.svg" alt="Logotipo de Twitter"></a>
+					<a class="footer-contact-social" href="{{metadata.author.linkedin}}" aria-label="Perfíl de LinkedIn de {{metadata.author.name}}" title="Perfíl de LinkedIn de {{metadata.author.name}}" target="blank"><img src="/assets/linkedin.svg" alt="Logotipo de LinkedIn"></a>
+				</div>
+			</address>
+	</div>
+	<nav class="footer-bottom">
+		<a href="/legal" rel="nofollow">Aviso legal</a>
+		<span>&nbsp;&middot;&nbsp;</span>
+		<a href="{{pkg.repository}}" target="blank">v{{pkg.version}}</a>
 	</nav>
 </footer>

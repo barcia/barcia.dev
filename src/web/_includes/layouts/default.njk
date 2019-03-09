@@ -4,6 +4,13 @@ layout: layouts/base.njk
 
 {% include "parts/nav.njk" %}
 
-	{{ content | safe }}
+<div class="wrapper">
+	<main>
+		<header>
+			<h1 class="page-title">{{ title }}</h1>
+		</header>
+		{{ content | safe }}
+	</main>
+</div>
 
 {% include "parts/footer.njk" %}

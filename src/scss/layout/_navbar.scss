@@ -2,6 +2,13 @@
 
 /* NAVBAR */
 :root {
+	--Navbar-height: 70px;
+	@include from(medium) {
+		--Navbar-height: 100px;
+	}
+}
+
+[data-scrolled="true"] {
 	--Navbar-height: 55px;
 	@include from(medium) {
 		--Navbar-height: 65px;
@@ -10,18 +17,37 @@
 
 .Navbar {
 	--Navbar-padding-x: 6px;
-	--Navbar-items-gap: 5px;
+	--Navbar-items-gap: 3px;
+	--Navbar-items-fontSize: 1em;
+	--Navbar-items-padding: 0.4em 0.4em;
 	--Navbar-icon-height: 24px;
+	@include transition((box-shadow, transform, height)); /* 2 */
+	position: fixed; /* 1 */
+	top: 0;
 	z-index: 99;
 	display: flex;
 	align-items: center;
 	width: 100vw;
 	height: var(--Navbar-height);
 	padding: 0 var(--Navbar-padding-x);
+	background-color: $alpha-w-900;
+	will-change: box-shadow, transform;
+
+	@include scrolled {
+		@include boxShadow(3);
+	}
+
+	@include scrollDown {
+		transform: translateY(calc(var(--Navbar-height) * -1));
+	}
+
+
 
 	@include from(medium) {
 		--Navbar-padding-x: 20px;
 		--Navbar-items-gap: 15px;
+		--Navbar-items-fontSize: 1.2em;
+		--Navbar-items-padding: 0.5em 0.9em;
 	}
 }
 
@@ -40,7 +66,46 @@
 	li:not(:first-child) {
 		margin-left: var(--Navbar-items-gap);
 	}
+
+	a {
+		position: relative;
+		padding: var(--Navbar-items-padding);
+		font-size: var(--Navbar-items-fontSize);
+		text-decoration: none;
+		text-transform: lowercase;
+		color: inherit;
+
+		&::after {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 6px;
+			background-color: color(secondary);
+			content: "";
+			transform: scaleX(0);
+			transition: transform 100ms ease-out;
+			transform-origin: bottom center;
+		}
+
+		@include hoverFocus {
+			&::after {
+					transform: scaleX(1);
+			}
+		}
+	}
+
+	span {
+		margin-right: 0.4em;
+		font-weight: weight(bold);
+	}
+
+	.isActive span {
+		color: color(secondary);
+	}
 }
+
+
 
 
 /* NAVBAR ICON */
@@ -57,53 +122,5 @@
 		@include circle(var(--Navbar-icon-height));
 		color: var(--fontColor);
 		background-color: transparent;
-	}
-}
-
-
-
-// VARIANTS
-/**
- * 1. The navbar height not computing in box-model layout.
- * 2. box-shadow: For navbar with shadow
- *    transform: For navbar--scrollSensitive variant
- */
-// Fix the navbar always on top
-.Navbar--fixed {
-	@include boxShadow(1);
-	@include transition(box-shadow); /* 2 */
-	position: fixed; /* 1 */
-	top: 0;
-	will-change: box-shadow;
-
-	@include scrolled {
-		@include boxShadow(3);
-	}
-}
-
-
-// Fix the navbar always on top, but it show and hide if scroll down or up
-.Navbar--scrollSensitive {
-	@include boxShadow(1);
-	@include transition((box-shadow, transform)); /* 2 */
-	position: fixed; /* 1 */
-	top: 0;
-	will-change: box-shadow, transform;
-
-	@include scrolled {
-		@include boxShadow(3);
-	}
-
-	@include scrollDown {
-		transform: translateY(calc(var(--Navbar-height) * -1));
-	}
-}
-
-
-// For WordPress Admin bar
-.Navbar--fixed,
-.Navbar--scrollSensitive {
-	body.admin-bar & {
-		top: 32px;
 	}
 }

@@ -1,5 +1,6 @@
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
@@ -8,6 +9,8 @@ module.exports = function(eleventyConfig) {
 		eleventyConfig.setBrowserSyncConfig({
 			files: "dist/assets/**/*"
 		});
+
+		eleventyConfig.setTemplateFormats([ "njk", "md", "txt" ]);
 
 
 		eleventyConfig.addFilter('dateTo', (dateObj, format) => {
@@ -22,6 +25,8 @@ module.exports = function(eleventyConfig) {
 
 		// PLugins
 		eleventyConfig.addPlugin(syntaxHighlight);
+		eleventyConfig.addPlugin(pluginRss);
+
 
 		  // Get the first `n` elements of a collection.
 			eleventyConfig.addFilter("last", (array, n) => {

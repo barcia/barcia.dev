@@ -9,7 +9,7 @@
 	--bgColor-onActive: #{black(0.2)};
 
 	// Font color
-	--fontColor             : #{$grey-700};
+	--fontColor             : #{$grey-800};
 	--fontColor--light      : #{$grey-500};
 	--fontColor--lighter    : #{$grey-300};
 	--fontColor--dark       : #{$grey-900};
@@ -46,8 +46,8 @@ body {
 // stylelint-disable-next-line selector-list-comma-newline-after
 h1, h3, h4, h2, h5, h6 {
 	margin-top: 1.2em;
-	margin-bottom: 0.5em;
-	line-height: 1.4em;
+	margin-bottom: 0.6em;
+	line-height: 1.2em;
 	text-rendering: optimizeLegibility;
 
 	&:first-child {

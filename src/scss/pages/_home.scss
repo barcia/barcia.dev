@@ -1,10 +1,47 @@
-.page-home {
+[data-page="home"] {
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	height: calc(100vh - env(viewport-nav-resize));
 }
 
-.home-main {
-	@include backgroundImage("/assets/back.svg");
-	flex: 1;
+.home {
+	&-wrapper {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		margin-top: calc(var(--Navbar-height));
+		padding: 30px $wrapper-margin-x 50px;
+		// @include backgroundImage("/assets/back.svg");
+
+
+		@include from(small) {
+			padding: 50px;
+		}
+
+		@include from(medium) {
+			padding: 100px 200px;
+		}
+	}
+
+	&-name {
+		font-size: 3em;
+		margin: 0 0 20px;
+		color: color(primary);
+	}
+
+	&-work {
+		font-size: 4em;
+		margin: 0 0 25px;
+		line-height: 0.9em;
+	}
+
+	&-interests {
+		font-size: 2em;
+		color: $grey-400;
+		line-height: 1em;
+
+	@include from(small) {
+		line-height: 1.2em;
+	}
+	}
 }

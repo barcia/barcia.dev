@@ -2,8 +2,8 @@
 	"title": "Iván Barcia",
 	"description": "Front-end Developer",
 	"url": "https://barcia.dev",
-	"feed": "https://barcia.dev/feed.rss",
-	"feedNotes": "https://barcia.dev/notes.rss",
+	"feed": "https://barcia.dev/feed.xml",
+	"feedNotes": "https://barcia.dev/notes.xml",
 	"author": {
 		"name": "Iván Barcia",
 		"email": "ivan@barcia.dev",

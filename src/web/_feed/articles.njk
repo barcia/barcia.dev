@@ -1,0 +1,26 @@
+---
+permalink: feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }} - Articles</title>
+  <subtitle>Articles from {{ metadata.author.name }}</subtitle>
+  <link href="{{ metadata.feed }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.article | rssLastUpdatedDate }}</updated>
+  <id>{{ metadata.url }}/articles</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for article in collections.article %}
+  {% set absoluteArticleUrl %}{{ article.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ article.data.title }}</title>
+    <link href="{{ absoluteArticleUrl }}"/>
+    <updated>{{ article.date | rssDate }}</updated>
+    <id>{{ absoluteArticleUrl }}</id>
+    <content type="html">{{ article.templateContent | htmlToAbsoluteUrls(absoluteArticleUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

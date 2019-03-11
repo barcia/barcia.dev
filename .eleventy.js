@@ -3,7 +3,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
+    eleventyConfig.addLayoutAlias('article', 'layouts/article.njk');
 		eleventyConfig.setDataDeepMerge(true);
 
 		eleventyConfig.setBrowserSyncConfig({

@@ -38,6 +38,7 @@
 		}
 
 		&-tag {
+			text-transform: lowercase;
 			&:not(:last-child) {
 				margin-right: 6px;
 			}

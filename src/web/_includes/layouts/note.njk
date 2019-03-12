@@ -1,0 +1,24 @@
+---
+title: Note
+layout: layouts/base.njk
+---
+
+
+{% include "parts/nav.njk" %}
+
+<main class="wrapper">
+		<header>
+			<h1 class="post-title">{{page.slug}}</h1>
+		</header>
+<article id="{{fileSlug}}" class="note">
+	<div>{{ content | safe }}</div>
+	<div class="note-metadata">
+		<time class="note-date" datetime="{{ date | dateTo('iso') }}" title="{{ date | dateTo("dd LLLL, yyyy - HH:mm") }}">{{ date | dateTo("dd MMMM, yyyy") }}</time>
+	</div>
+</article>
+</main>
+
+
+{% include "parts/footer.njk" %}
+
+{# {% include 'parts/njk' %} #}

@@ -11,7 +11,7 @@
 	"scripts": {
 		"start": "gulp watch & eleventy --serve",
 		"build": "gulp build && eleventy",
-		"prepare": "npm rebuild node-sass"
+		"postinstall": "npm rebuild"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^0.7.1",

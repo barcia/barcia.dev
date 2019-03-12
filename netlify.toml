@@ -4,18 +4,3 @@
 
 [context.production.environment]
   NODE_ICU_DATA = "$(pwd)/node_modules/full-icu"
-
-
-# Redirects
-[[redirects]]
-  from = "/github"
-  to = "https://github.com/barcia"
-  status = 301
-[[redirects]]
-  from = "/twitter"
-  to = "https://twitter.com/bartzia"
-  status = 301
-[[redirects]]
-  from = "/linkedin"
-  to = "https://www.linkedin.com/in/ivanbarcia/"
-  status = 301

@@ -1,6 +1,33 @@
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>{{ title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ metadata.description }}">
+<meta name="generator" content="Eleventy">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="author" href="humans.txt">
+<link rel="license" href="/legal">
+<link rel="alternate" href="{{ metadata.feed }}" type="application/atom+xml" title="{{ metadata.title }}">
+
+<link rel="icon" sizes="192x192" href="/assets/icon.png">
+<link rel="apple-touch-icon" href="/assets/icon.png">
+<link rel="mask-icon" href="/assets/icon.svg" color="black">
+
 <link rel="stylesheet" href="/assets/style.css">
 <script src="/assets/app.js" defer></script>
+
+<meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title or metadata.title }}">
+<meta property="og:image" content="{{ metadata.url }}/assets/icon.png">
+<meta property="og:description" content="{{ description or metadata.description }}">
+<meta property="og:site_name" content="{{ metadata.title }}">
+<meta property="og:locale" content="es_ES">
+<meta property="article:author" content="https://www.facebook.com/ivanbarciafernandez">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@bartzia">
+<meta name="twitter:url" content="{{ metadata.url }}{{ page.url }}">
+<meta name="twitter:title" content="{{ title or metadata.title }}">
+<meta name="twitter:description" content="{{ description or metadata.description }}">
+<meta name="twitter:image" content="{{ metadata.url }}/assets/icon.png">

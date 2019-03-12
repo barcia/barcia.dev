@@ -2,5 +2,5 @@
   publish = "dist"
   command = "npm run build"
 
-[build.environment]
-  NODE_ICU_DATA = "$(pwd)/node_modules/full-icu"
+# [build.environment]
+#   NODE_ICU_DATA = "$(pwd)/node_modules/full-icu"

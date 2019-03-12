@@ -8,6 +8,8 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const browsersync = require('browser-sync');
 
+sass.compiler = require('node-sass');
+
 
 config.scss = {
 		entry: [

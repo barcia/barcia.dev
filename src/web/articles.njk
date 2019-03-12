@@ -14,7 +14,7 @@ layout: layouts/default.njk
 				<span>&nbsp;&middot;&nbsp;</span>
 				<ul class="blog-post-tagList">
 						{% for tag in post.data.tags %}
-							{% if tag != "post" %}
+							{% if tag != "article" %}
 								{% set tagUrl %}/tags/{{ tag }}/{% endset %}
 								<li class="blog-post-tag"><a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a></li>
 							{% endif %}

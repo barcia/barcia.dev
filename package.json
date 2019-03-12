@@ -24,6 +24,7 @@
 		"browserdom": "^2.0.2",
 		"cssnano": "^4.1.10",
 		"del": "^3.0.0",
+		"full-icu": "^1.2.1",
 		"gulp": "^4.0.0",
 		"gulp-eslint": "^5.0.0",
 		"gulp-notify": "^3.2.0",

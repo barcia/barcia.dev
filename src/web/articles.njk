@@ -10,7 +10,7 @@ layout: layouts/default.njk
 		<article class="blog-post">
 			<a class="blog-post-link" href="{{ post.url | url }}"><h2 class="blog-post-title">{{ post.data.title }}</h2></a>
 			<div class="blog-post-metadata">
-				<time class="blog-post-date" datetime="{{ post.date | dateTo('iso') }}">{{ post.date | dateTo("dd LLLL, yyyy") }}</time>
+				<time class="blog-post-date" datetime="{{ post.date | dateTo('iso') }}">{{ post.date | dateTo("dd MMMM, yyyy") }}</time>
 				<span>&nbsp;&middot;&nbsp;</span>
 				<ul class="blog-post-tagList">
 						{% for tag in post.data.tags %}

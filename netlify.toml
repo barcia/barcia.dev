@@ -7,6 +7,15 @@
 
 
 # Redirects
-/github				https://github.com/barcia										301
-/twitter			https://twitter.com/bartzia									301
-/linkedin			https://www.linkedin.com/in/ivanbarcia/			301
+[[redirects]]
+  from = "/github"
+  to = "https://github.com/barcia"
+  status = 301
+[[redirects]]
+  from = "/twitter"
+  to = "https://twitter.com/bartzia"
+  status = 301
+[[redirects]]
+  from = "/linkedin"
+  to = "https://www.linkedin.com/in/ivanbarcia/"
+  status = 301

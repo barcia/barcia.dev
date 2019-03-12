@@ -4,3 +4,9 @@
 
 [context.production.environment]
   NODE_ICU_DATA = "$(pwd)/node_modules/full-icu"
+
+
+# Redirects
+/github				https://github.com/barcia										301
+/twitter			https://twitter.com/bartzia									301
+/linkedin			https://www.linkedin.com/in/ivanbarcia/			301

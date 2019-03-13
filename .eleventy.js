@@ -13,7 +13,7 @@ module.exports = function(eleventyConfig) {
 		eleventyConfig.setBrowserSyncConfig({
 			files: "dist/assets/**/*"
 		});
-		eleventyConfig.setTemplateFormats([ "njk", "md", "txt" ]);
+		eleventyConfig.setTemplateFormats([ "njk", "md", "txt", "jpg" ]);
 
 
 		// FILTERS

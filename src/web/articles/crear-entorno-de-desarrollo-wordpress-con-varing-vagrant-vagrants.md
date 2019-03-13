@@ -6,7 +6,7 @@ tags: ["WordPress", "JS"]
 
 Cuando empezamos a desarrollar **plugins**, **themes** o bien el propio **core** de **[WordPress](https://wordpress.org)** necesitamos hacerlo en local, y para eso tenemos varias formas de hacerlo.
 
-Podemos instalar un un servidor en nuestro propio equipo, [hacerlo con contenedores Docker](https://barcia.gal/blog/crear-entorno-de-desarrollo-wordpress-con-docker/), usar aplicaciones como [Local by Flywheel﻿](https://local.getflywheel.com), o crear entornos de desarrollo en máquinas virtuales. Esta última será la que trataremos hoy, y lo haremos con **[Vagrant](https://www.vagrantup.com)** y **[Varying Vagrant Vagrants (VVV)](https://varyingvagrantvagrants.org/docs/en-US/adding-a-new-site/setup-script/)**. A pesar de no ser la opción más sencilla de todas tampoco es extremadamente complicada, pero sin embargo sí nos da muchísima más potencia y versatilidad.
+Podemos instalar un un servidor en nuestro propio equipo, [hacerlo con contenedores Docker](https://barcia.gal/blog/crear-entorno-de-desarrollo-wordpress-con-docker/), usar aplicaciones como [Local by Flywheel](https://local.getflywheel.com), o crear entornos de desarrollo en máquinas virtuales. Esta última será la que trataremos hoy, y lo haremos con **[Vagrant](https://www.vagrantup.com)** y **[Varying Vagrant Vagrants (VVV)](https://varyingvagrantvagrants.org/docs/en-US/adding-a-new-site/setup-script/)**. A pesar de no ser la opción más sencilla de todas tampoco es extremadamente complicada, pero sin embargo sí nos da muchísima más potencia y versatilidad.
 
 Los únicos requisitos previos son que debes conocer el uso básico de la **terminal**, tratar con archivos de configuracion de texto, hecharle un vistazo a [wp-cli](http://wp-cli.org), y un poco de paciencia 😉.
 
@@ -16,7 +16,7 @@ Por fortuna, los desarrolladores de WordPress tenemos una herramienta **_open so
 
 A continuación explico **cómo crear nuestro primer WordPress con VVV**. El proceso está realizado en **Mac OS**. Pero la mayoría de archivos de configuración y comandos son idénticos para otros Sistemas Operativos. En las respectivas documentaciones tenéis más indicaciones para otros SO.
 
-## 1\. Requerimientos previos
+## 1. Requerimientos previos
 
 1. **[Descargamos](https://www.virtualbox.org/wiki/Downloads)** **VirtualBox** de su página oficial y lo **instalamos**
 2. **[Descargamos](https://www.vagrantup.com/downloads.html)** **Vagrant** de su página oficial y lo **instalamos**
@@ -29,13 +29,15 @@ A continuación explico **cómo crear nuestro primer WordPress con VVV**. El pro
 4.  Este no es imprescindible, pero sí muy cómodo. Se trata de **[Vagrant Manager](http://vagrantmanager.com)**. Un programa para Mac OS y para Windows que nos añade un icono en la barra de menú/tareas desde donde podremos gestionar fácilmente nuestras máquinas virtuales.
 5.  **Importante: Reinicia el equipo.**
 
-## 2\. Instalamos VVV
+## 2. Instalamos VVV
 
 En su web recomiendan hacerlo mediante _git_ porque es mas sencillo actualizarlo posteriormente a las nuevas versiones.
 
 Ejecutamos en la terminal:
 
-    git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/vvv
+```shell
+git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/vvv
+```
 
 Ahora se descarga VVV en el directorio `~/vvv` dentro de nuestro directorio personal.
 
@@ -43,7 +45,7 @@ Y ya estaría todo. Ejecutando `vagrant-up` ya se debería configurar correctame
 
 Es muy muy recomendable que te **leas TODA la documentación** de [Varying Vagrant Vagrants](https://varyingvagrantvagrants.org). Es muy corta, no te llevará demasiado tiempo.
 
-## 3\. Añadir un nuevo sitio
+## 3. Añadir un nuevo sitio
 
 Una vez descargado VVV, accedemos al directorio recién descargado, en nuestro caso `~/vvv/` y copiamos el archivo `vvv-config.yml` a `vvv-custom.yml`. En este nuevo archivo será donde añadiremos nuestros sitios.
 
@@ -51,8 +53,8 @@ Este es un archivo [_Yaml_](https://es.wikipedia.org/wiki/YAML), así que es imp
 
 Cuando creamos un sitio nuevo con Vagrant, hay que tener en cuenta dos aspectos fundamentales:
 
-1.  Indicarlo en el archivo de configuración global `vvv-custom.yml.`
-2.  Crear los archivos de configuración del nuevo sitio en particular. Son dos: `vvv-nginx.conf` y `vvv-init.sh`. Estos archivos los debemos crear dentro del directorio: `~/vvv/www/NOMBRE_DEL_SITIO/provision/`
+1. Indicarlo en el archivo de configuración global `vvv-custom.yml.`
+2. Crear los archivos de configuración del nuevo sitio en particular. Son dos: `vvv-nginx.conf` y `vvv-init.sh`. Estos archivos los debemos crear dentro del directorio: `~/vvv/www/NOMBRE_DEL_SITIO/provision/`
 
 Los archivos de configuración del directorio `provision/` indicados en el punto número 2, se pueden obviar indicando en el `vvv-custom.yml` la URL de un repositorio para que los coja directamente de ahí.
 
@@ -62,18 +64,22 @@ En la documentación de VVV tienes más información acerca de [añadir nuevos s
 
 Para añadir un nuevo sitio llamado, por ejemplo, "tienda" simplemente debemos añadir en `vvv-custom.yml` la siguiente configuración:
 
-    sites:
-      tienda:
-        hosts:
-          - tienda.test
+```yaml
+sites:
+  tienda:
+    hosts:
+      - tienda.test
+```
 
 Simplemente le hemos indicado el nombre del sitio, y la URL a través de la que accederemos al sitio. Si también queremos indicar un repositorio con los archivos de configuración _provision_, lo hacemos así:
 
-    sites:
-      tienda:
-        repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-default.git
-        hosts:
-          - tienda.test
+```yaml
+sites:
+  tienda:
+    repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-default.git
+    hosts:
+      - tienda.test
+```
 
 Antes se solía usar la extensión `.dev` para URL's en entornos de desarrollo locales, pero ahora está administrada por Google. Lo correcto es usar extensiones `.test`. La propia [IETF](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force) lo [recomienda y protege](https://en.wikipedia.org/wiki/.test) para tal fin.
 

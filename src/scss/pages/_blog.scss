@@ -106,3 +106,15 @@
 		text-align: center;
 	}
 }
+
+
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	&--2 {
+		@include from(small) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}

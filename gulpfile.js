@@ -11,5 +11,5 @@ const watch = require('./.tasks/watch');
 
 // Exports
 exports.watch = gulp.series(clean, watch.assets);
-exports.build = gulp.series(clean, gulp.parallel(css.prod, img));
+exports.build = gulp.series(clean, gulp.parallel(css.prod, js.prod, img));
 exports.clean = clean;

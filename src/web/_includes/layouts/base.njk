@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ lang if lang else "en" }}">
+<head>
+    {% include "parts/head.njk" %}
+		{% block head %}
+		{% endblock head %}
+</head>
+<body class="body" {% if title %}data-page="{{ title | slug }}"{% endif %}>
+	{% block body %}
+	{% endblock body %}
+</body>
+</html>

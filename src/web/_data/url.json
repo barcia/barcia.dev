@@ -1,0 +1,13 @@
+{
+	"twitter": {
+		"root": "https://twitter.com/",
+		"status": "/status/"
+	},
+	"github": {
+		"root": "https://github.com/"
+	},
+	"linkedin": {
+		"root": "https://www.linkedin.com/",
+		"profiles": "in/"
+	}
+}

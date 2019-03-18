@@ -1,0 +1,19 @@
+---
+title: Home
+permalink: /index.html
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+
+{% include "parts/nav.njk" %}
+
+<main class="home-wrapper">
+		<h1 class="home-name">Iván Barcia</h1>
+		<h2 class="home-work">Web Designer & Developer</h2>
+		<div class="home-interests">Interested in CSS, JavaScript, Design, UX, Product Development, and all about frontend stuff.</div>
+</main>
+
+{% include "parts/footer.njk" %}
+{% endblock body %}

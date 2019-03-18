@@ -1,0 +1,21 @@
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+{% include "parts/nav.njk" %}
+
+<main class="wrapper">
+		<header>
+			<h1 class="post-title">Note {{ page.fileSlug }}</h1>
+		</header>
+
+		<article id="{{ page.fileSlug }}" class="note">
+			<div>{{ content | safe }}</div>
+			<div class="note-metadata">
+				<time class="note-date" datetime="{{ date | dateTo('iso') }}" title="{{ date | dateTo("dd LLLL, yyyy - HH:mm") }}">{{ date | dateTo("dd MMMM, yyyy") }}</time>
+			</div>
+		</article>
+</main>
+
+
+{% include "parts/footer.njk" %}
+{% endblock body %}

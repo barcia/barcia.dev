@@ -1,0 +1,58 @@
+/* $BUTTONS */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+[role="button"] {
+	@include inlineFlexCenter;
+	min-width: 60px;
+	min-height: 35px;
+	padding: 1px 7px;
+	border: none;
+	text-decoration: none;
+	white-space: nowrap;
+	vertical-align: middle;
+	color: var(--fontColor);
+	background-color: $grey-150;
+	outline: 0;
+
+	@include hoverFocus {
+		color: inherit;
+		background-color: color(primary);
+	}
+
+	&:disabled {
+		color: var(--fontColor--light);
+	}
+}
+
+
+
+.Button-GitHub {
+	@include inlineFlexCenter;
+	padding: 5px 10px;
+	border: 1px solid rgba(27,31,35,.2);
+	border-radius: .25em;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #24292e;
+	background-color: #eff3f6;
+	background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+
+	@include hoverFocusActive {
+		border-color: rgba(27,31,35,.35);
+		color: inherit;
+		background-color: #e6ebf1;
+		background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+	}
+
+	&::before {
+		@include size(18px);
+		display: inline-block;
+		margin-right: 6px;
+		background-image: url("./social/github.svg");
+		content: "";
+	}
+}

@@ -1,0 +1,26 @@
+---
+permalink: notes/feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title }} - Notes</title>
+  <subtitle>Notes from {{ site.author.name }}</subtitle>
+  <link href="{{ site.url }}{{ site.feed.notes }}" rel="self"/>
+  <link href="{{ site.url }}"/>
+  <updated>{{ collections.note | rssLastUpdatedDate }}</updated>
+  <id>{{ site.url }}/notes</id>
+  <author>
+    <name>{{ site.author.name }}</name>
+    <email>{{ site.author.email }}</email>
+  </author>
+  {%- for note in collections.notes %}
+  {% set absolutePostUrl %}{{ note.url | url | absoluteUrl(site.url) }}{% endset %}
+  <entry>
+    <title>Note {{note.fileSlug}}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ note.date | rssDate }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ note.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

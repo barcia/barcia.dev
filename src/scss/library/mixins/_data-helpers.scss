@@ -1,0 +1,81 @@
+// Color schemes
+@mixin colorSchemeDark {
+	[data-color-scheme="dark"] & {
+		@content;
+	}
+}
+
+@mixin colorSchemeLight {
+	[data-color-scheme="light"] & {
+		@content;
+	}
+}
+
+@mixin colorSchemeHighContrast {
+	[data-color-scheme="highcontrast"] & {
+		@content;
+	}
+}
+
+
+
+// Styles for the item when is in a touchDevice
+@mixin touchDevice {
+	[data-touchdevice="true"] & {
+		@content;
+	}
+}
+
+
+
+// Styles for the item when isn"t in a touchDevice
+@mixin notTouchDevice {
+	[data-touchdevice="false"] & {
+		@content;
+	}
+}
+
+
+
+// Styles for the item when the page is scroll down
+@mixin scrollDown {
+	[data-scrolldirection="down"] & {
+		@content;
+	}
+}
+
+
+
+// Styles for the item when the page is scroll up
+@mixin scrollUp {
+	[data-scrolldirection="up"] & {
+		@content;
+	}
+}
+
+
+
+// Styles for the item when page is scrolled
+@mixin scrolled {
+	[data-scrolled="true"] & {
+		@content;
+	}
+}
+
+
+
+// Styles for the item when page is not scrolled
+@mixin notScrolled {
+	[data-scrolled="false"] & {
+		@content;
+	}
+}
+
+
+
+// Styles for the item when is night
+@mixin night {
+	[data-night="true"] & {
+		@content;
+	}
+}

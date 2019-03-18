@@ -1,0 +1,83 @@
+/* $FOOTER */
+
+.footer {
+	background-color: $grey-50;
+	padding: 40px 12px 20px;
+	margin-top: auto;
+
+	a {
+		text-decoration: none;
+	}
+
+
+	&-main {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		@include from(medium) {
+			@include marginX(30px);
+		}
+
+		a {
+			color: $grey-500;
+			@include hoverFocusActive {
+				color: color(primary);
+			}
+		}
+	}
+
+	&-sideProjects {
+		@include genericList;
+
+		@include coarse {
+			li {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	&-rightMenu {
+		text-align: right;
+	}
+
+	&-now {
+		margin-bottom: 15px;
+	}
+
+	&-contact {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+
+		&-mail {
+			font-style: normal;
+			margin-bottom: 20px;
+		}
+
+		&-social {
+			margin: 0 6px;
+
+			img {
+				@include size(36px);
+			}
+		}
+	}
+
+
+
+	&-bottom {
+		font-size: 0.85em;
+		text-align: center;
+		margin-top: 30px;
+		color: $grey-300;
+
+		a {
+			color: $grey-300;
+			white-space: nowrap;
+			@include hoverFocusActive {
+				color: color(primary);
+			}
+		}
+	}
+}

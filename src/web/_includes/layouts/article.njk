@@ -1,0 +1,43 @@
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+{% include "parts/nav.njk" %}
+
+<main class="wrapper">
+	<article class="post">
+		<header>
+			<h1 class="post-title">{{ title }}</h1>
+		</header>
+		<div class="post-content">
+			{{ content | safe }}
+		</div>
+		<footer class="post-footer">
+			<div class="post-metadata">
+				<time class="blog-post-date" datetime="{{ date | dateTo('iso') }}">{{ date | dateTo("dd LLLL, yyyy") }}</time>
+				<span>&nbsp;&middot;&nbsp;</span>
+				<ul class="blog-post-tagList">
+						{% for tag in tags %}
+							{% if tag != "article" %}
+								{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+								<li class="blog-post-tag">
+									{# <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a> #}
+									<span>{{ tag }}</span>
+								</li>
+							{% endif %}
+						{% endfor %}
+				</ul>
+			</div>
+			<div class="post-comments">
+				{% if commentsID %}
+					<a class="Button-GitHub" href="https://github.com/barcia/barcia.dev/issues/{{commentsID}}" target="blank">Comentarios</a>
+				{% else %}
+					<a class="Button-GitHub" href="https://github.com/barcia/barcia.dev/issues/new?labels=comment,article&title={{title}}" target="blank">Comentarios</a>
+				{% endif %}
+			</div>
+		</footer>
+	</article>
+</main>
+
+
+{% include "parts/footer.njk" %}
+{% endblock body %}

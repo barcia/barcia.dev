@@ -1,0 +1,17 @@
+{% extends "layouts/base.njk" %}
+
+{% block body %}
+{% include "parts/nav.njk" %}
+
+<div class="wrapper">
+	<main>
+		<header>
+			<h1 class="page-title">{{ title }}</h1>
+		</header>
+		{% block content %}
+		{% endblock content %}
+	</main>
+</div>
+
+{% include "parts/footer.njk" %}
+{% endblock body %}

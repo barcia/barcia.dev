@@ -1,0 +1,36 @@
+---
+title: Articles
+description: Front-end development related articles
+permalink: /articles/index.html
+---
+
+{% extends "layouts/page.njk" %}
+
+{% block content %}
+<ul class="blog-postList">
+	{% for post in collections.articles %}
+	<li class="blog-postList-item">
+
+		<article class="blog-post">
+			<a class="blog-post-link" href="{{ post.url | url }}"><h2 class="blog-post-title">{{ post.data.title }}</h2></a>
+			<div class="blog-post-metadata">
+				<time class="blog-post-date" datetime="{{ post.date | dateTo('iso') }}">{{ post.date | dateTo("dd MMMM, yyyy") }}</time>
+				<span>&nbsp;&middot;&nbsp;</span>
+				<ul class="blog-post-tagList">
+						{% for tag in post.data.tags %}
+							{% if tag != "article" %}
+								{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+								<li class="blog-post-tag">
+									{# <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a> #}
+									<span>{{ tag }}</span>
+								</li>
+							{% endif %}
+						{% endfor %}
+				</ul>
+			</div>
+		</article>
+
+	</li>
+	{% endfor %}
+</ul>
+{% endblock content %}

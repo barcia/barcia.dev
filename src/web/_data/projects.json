@@ -1,0 +1,18 @@
+{
+	"bramework": {
+		"name": "Bramework",
+		"repository": "https://github.com/barcia/bramework"
+	},
+	"swibe": {
+		"name": "Swibe",
+		"repository": "https://github.com/barcia/swibe"
+	},
+	"standarize": {
+		"name": "Standarize",
+		"repository": "https://github.com/barcia/standarize"
+	},
+	"browserdom": {
+		"name": "BrowserDOM",
+		"repository": "https://github.com/barcia/browserdom"
+	}
+}

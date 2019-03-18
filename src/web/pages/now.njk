@@ -1,0 +1,46 @@
+---
+title: Now
+permalink: /now/index.html
+---
+
+{% extends "layouts/page.njk" %}
+
+{% set content %}
+🗓 *Update: 2019-03-18*
+
+## Learning
+Currently I am focused primarly on improve my skills on Design, UX and JavaScript
+
+
+## Side projects
+At this moment I am centered on the port some of my websites, like this, from WordPress to a static site generator tool, in this case, [Eleventy](https://www.11ty.io) and [Netlify](https://www.netlify.com/) as hosting.
+
+
+## Reading
+Recently I bought *[Máis que ver: Cen historias do deseño na Galiza](https://www.amazon.es/gp/product/8491214267/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)* but I will not start it until I finish *A Feast for Crows*.
+
+
+## Writing
+I have many ideas for articles, but I think I will not write in the next weeks until my sites are all ported to Eleventy and Netlify.
+
+## Place
+From Portomouro, but currently living in [A Coruña, Galiza, SPAIN](https://goo.gl/maps/2n6Rx96EGWk).
+
+
+## Profesional
+I am a frontend designer and developer in [OpositaTest](https://www.opositatest.com/).
+
+
+## Personal
+I'm still learning and improving my productivity with GTD. And recently I started running again after a long time.
+
+
+<small>
+	<a href="https://nownownow.com/about" target="blank">What is this page?</a>
+</small>
+
+{% endset %}
+
+{% block content %}
+	{{ content | markdownify | safe }}
+{% endblock content %}

@@ -1,0 +1,16 @@
+{
+	"title": "Iván Barcia",
+	"description": "Front-end Developer",
+	"url": "https://barcia.dev",
+	"feed": {
+		"articles": "/articles/feed.xml",
+		"notes": "/notes/feed.xml"
+	},
+	"author": {
+		"name": "Iván Barcia",
+		"email": "ivan@barcia.dev",
+		"github": "barcia",
+		"twitter": "bartzia",
+		"linkedin": "ivanbarcia"
+	}
+}

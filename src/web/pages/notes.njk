@@ -1,0 +1,16 @@
+---
+title: Notes
+permalink: /notes/index.html
+---
+{% extends "layouts/page.njk" %}
+
+{% block content %}
+
+<ul class="noteList">
+	{% for note in collections.notes %}
+	<li class="noteList-item">
+			{% include 'parts/note.njk' %}
+	</li>
+	{% endfor %}
+</ul>
+{% endblock content %}

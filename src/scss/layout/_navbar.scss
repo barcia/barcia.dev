@@ -1,0 +1,127 @@
+/* $NAVBAR */
+
+/* NAVBAR */
+:root {
+	--Navbar-height: 70px;
+	@include from(medium) {
+		--Navbar-height: 100px;
+	}
+}
+
+[data-scrolled="true"] {
+	--Navbar-height: 55px;
+	@include from(medium) {
+		--Navbar-height: 65px;
+	}
+}
+
+.Navbar {
+	--Navbar-padding-x: 6px;
+	--Navbar-items-gap: 3px;
+	--Navbar-items-fontSize: 1em;
+	--Navbar-items-padding: 0.4em 0.4em;
+	--Navbar-icon-height: 24px;
+	@include transition((box-shadow, transform, height)); /* 2 */
+	position: fixed; /* 1 */
+	top: 0;
+	z-index: 99;
+	display: flex;
+	align-items: center;
+	width: 100vw;
+	height: var(--Navbar-height);
+	padding: 0 var(--Navbar-padding-x);
+	background-color: $alpha-w-900;
+	will-change: box-shadow, transform;
+
+	@include scrolled {
+		@include boxShadow(3);
+	}
+
+	@include scrollDown {
+		transform: translateY(calc(var(--Navbar-height) * -1));
+	}
+
+
+
+	@include from(medium) {
+		--Navbar-padding-x: 20px;
+		--Navbar-items-gap: 15px;
+		--Navbar-items-fontSize: 1.2em;
+		--Navbar-items-padding: 0.5em 0.9em;
+	}
+}
+
+/* All inside an element with this class is at right */
+.Navbar-right {
+	@include inlineFlexCenter;
+	margin-left: auto;
+}
+
+
+/* NAVBAR LIST */
+.Navbar-list {
+	@include inlineList;
+	margin: 0 20px;
+
+	li:not(:first-child) {
+		margin-left: var(--Navbar-items-gap);
+	}
+
+	a {
+		position: relative;
+		padding: var(--Navbar-items-padding);
+		font-size: var(--Navbar-items-fontSize);
+		text-decoration: none;
+		text-transform: lowercase;
+		color: inherit;
+
+		&::after {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 6px;
+			background-color: color(secondary);
+			content: "";
+			transform: scaleX(0);
+			transition: transform 100ms ease-out;
+			transform-origin: bottom center;
+		}
+
+		@include hoverFocus {
+			&::after {
+					transform: scaleX(1);
+			}
+		}
+	}
+
+	span {
+		margin-right: 0.4em;
+		font-weight: weight(bold);
+		color: var(--fontColor--lighter);
+	}
+
+	.isActive span {
+		color: color(secondary);
+	}
+}
+
+
+
+
+/* NAVBAR ICON */
+.Navbar-icon {
+	@include inlineFlexCenter;
+	padding: 12px;
+	border-radius: 50%;
+	cursor: pointer;
+	@include linkStates(background-color,
+											var(--bgColor-onHover),
+											var(--bgColor-onActive));
+
+	svg {
+		@include circle(var(--Navbar-icon-height));
+		color: var(--fontColor);
+		background-color: transparent;
+	}
+}

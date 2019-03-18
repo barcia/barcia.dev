@@ -1,0 +1,16 @@
+{%- set isDetailView = layout == 'layouts/note' -%}
+
+<article id="{{note.fileSlug}}" class="note" data-detail="{{ isDetailView }}">
+	<div>{{ note.templateContent | safe }}</div>
+	<div class="note-metadata">
+		<time class="note-date" datetime="{{ note.date | dateTo('iso') }}" title="{{ note.date | dateTo("dd LLLL, yyyy - HH:mm") }}">{{ note.date | dateTo("dd MMMM, yyyy") }}</time>
+		<span class="note-links">
+		{% if note.data.twitter %}
+			<a href="{{ url.twitter.root }}{{ site.author.twitter }}{{ url.twitter.status }}{{ note.data.twitter }}" target="blank">
+				<img src="/assets/social/twitter.svg" alt="">
+			</a>
+		{% endif %}
+		</span>
+		<a class="note-id" href="{{page.url}}{{note.fileSlug}}">{{note.fileSlug}}</a>
+	</div>
+</article>

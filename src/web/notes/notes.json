@@ -1,4 +1,5 @@
 {
 	"layout": "layouts/note",
-	"tags": ["note"]
+	"tags": ["note"],
+	"lang": "es"
 }

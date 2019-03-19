@@ -2,9 +2,9 @@
 
 // LIBRARY
 @import "library/colors";
-@import "library/variables";
 @import "library/functions";
 @import "library/mixins";
+@import "library/variables";
 
 // RESET
 @import "standarize/standarize";
@@ -19,12 +19,13 @@
 @import "components/card";
 @import "components/embed";
 @import "components/list";
+@import "components/textnote";
+@import "components/toggle";
 
 @import "layout/wrapper";
 @import "layout/navbar";
 @import "layout/header";
 @import "layout/footer";
-@import "layout/bottom-navbar";
 
 @import "pages/home";
 @import "pages/notes";

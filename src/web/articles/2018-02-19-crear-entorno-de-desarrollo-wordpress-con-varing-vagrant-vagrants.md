@@ -1,6 +1,6 @@
 ---
 title: Crear entorno de desarrollo WordPress con Varing Vagrant Vagrants
-date: 2018-02-19
+date: 2018-02-19T00:00:00+01:00
 tags: ["wordpress", "js"]
 ---
 
@@ -35,7 +35,7 @@ En su web recomiendan hacerlo mediante _git_ porque es mas sencillo actualizarlo
 
 Ejecutamos en la terminal:
 
-```shell
+```bash
 git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/vvv
 ```
 

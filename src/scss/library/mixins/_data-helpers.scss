@@ -1,12 +1,12 @@
 // Color schemes
 @mixin colorSchemeDark {
-	[data-color-scheme="dark"] & {
+	[data-color-scheme="dark"] {
 		@content;
 	}
 }
 
 @mixin colorSchemeLight {
-	[data-color-scheme="light"] & {
+	[data-color-scheme="light"] {
 		@content;
 	}
 }

@@ -1,6 +1,6 @@
 ---
 title: WordCamp Pontevedra 2018
-date: 2018-09-26
+date: 2018-09-26T00:00:00+01:00
 tags: ["wordpress"]
 ---
 

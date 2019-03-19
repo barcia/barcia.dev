@@ -3,7 +3,15 @@
 
 My website as frontend developer. Built with [Eleventy](https://www.11ty.io) and hosted on [Netlify](https://www.netlify.com/).
 
+## Content
 
+### Shorcodes
+* textNotes
+  ```
+  {% textnote %}
+  This is a text note
+  {% endtextnote %}
+  ```
 
 ## License
 The source code is under [MIT License](https://github.com/barcia/bramework/blob/master/LICENSE).

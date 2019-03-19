@@ -6,10 +6,9 @@ excludeFromSitemap: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {% for page in collections.all %}
 {% if not page.data.excludeFromSitemap %}
-  {% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <url>
-    <loc>{{ absoluteUrl }}</loc>
-    <lastmod>{{ page.data.update or page.data.date | dateTo('yyyy-LL-dd') }}</lastmod>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ page.data.update or page.date | dateTo('yyyy-LL-dd') }}</lastmod>
   </url>
 {% endif %}
 {% endfor %}

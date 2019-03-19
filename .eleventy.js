@@ -1,23 +1,37 @@
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const md = require('markdown-it')({
   html: true,
   linkify: true,
   typographer: true
 });
 
+
 module.exports = function(eleventyConfig) {
-		// Plugins
-		eleventyConfig.addPlugin(syntaxHighlight);
-		eleventyConfig.addPlugin(pluginRss);
+
+	// Plugins
+	eleventyConfig.addPlugin(syntaxHighlight);
+	eleventyConfig.addPlugin(pluginRSS);
 
 
-		// Alias
-		eleventyConfig.setDataDeepMerge(true);
-		eleventyConfig.setBrowserSyncConfig({
-			files: "dist/assets/**/*"
-		});
+	// Config
+	eleventyConfig.setDataDeepMerge(true);
+	eleventyConfig.setBrowserSyncConfig({
+		files: "dist/assets/**/*"
+	});
+
+
+	// Collections
+	eleventyConfig.addCollection('articles', collection => {
+		return collection.getFilteredByGlob('src/web/articles/*.md').reverse()
+	})
+
+	eleventyConfig.addCollection('notes', collection => {
+		return collection.getFilteredByGlob(['src/web/notes/*.md']).reverse()
+	})
+
+
 
 
 		// FILTERS
@@ -44,21 +58,16 @@ module.exports = function(eleventyConfig) {
 		eleventyConfig.setLibrary('md', md);
 		eleventyConfig.addFilter('markdownify', str => md.render(str));
 
+		eleventyConfig.addPairedShortcode("textnote", require("./src/web/_includes/shortcodes/textnote"));
 
-		// Collections
-		eleventyConfig.addCollection('articles', collection => {
-			return collection.getFilteredByGlob('src/web/articles/*.md').reverse()
-		})
-
-		eleventyConfig.addCollection('notes', collection => {
-			return collection.getFilteredByGlob(['src/web/notes/*.md']).reverse()
-		})
 
 
     return {
         dir: {
             input: "src/web",
 						output: "dist"
-        }
+				},
+				htmlTemplateEngine : "njk",
+				markdownTemplateEngine : "njk",
     };
 };

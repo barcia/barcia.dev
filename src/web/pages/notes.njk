@@ -1,16 +1,19 @@
 ---
 title: Notes
+description: Short notes and status updates
 permalink: /notes/index.html
 ---
+
 {% extends "layouts/page.njk" %}
 
 {% block content %}
 
-<ul class="noteList">
-	{% for note in collections.notes %}
-	<li class="noteList-item">
-			{% include 'parts/note.njk' %}
-	</li>
-	{% endfor %}
-</ul>
+	<ul class="noteList">
+		{% for note in collections.notes %}
+		<li class="noteList-item">
+				{% include 'parts/note.njk' %}
+		</li>
+		{% endfor %}
+	</ul>
+
 {% endblock content %}

@@ -1,0 +1,54 @@
+$Toggle-width: 40px;
+$Toggle-height: 16px;
+$Toggle-badgeSize: 20px;
+$Toggle-badgeSize-gap: ($Toggle-height - $Toggle-badgeSize) / 2;
+
+
+.Toggle {
+		display: flex;
+    align-items: center;
+		justify-content: flex-end;
+		cursor: pointer;
+		margin-bottom: 15px;
+
+	&-input {
+		width: 0;
+		height: 0;
+		visibility: hidden;
+	}
+
+	&-track {
+		position: relative;
+		display: block;
+		width: $Toggle-width;
+		height: $Toggle-height;
+		border-radius: $Toggle-height;
+		background-color: var(--fontColor--lighter);
+		margin-right: 8px;
+
+		&::after {
+			@include circle($Toggle-badgeSize);
+			position: absolute;
+			top: $Toggle-badgeSize-gap;
+			left: $Toggle-badgeSize-gap;
+			background: $white;
+			content: "";
+			transition: time(normal);
+			@include boxShadow(2);
+		}
+	}
+
+	&-label {
+		color: var(--fontColor--light);
+	}
+
+		&-input:checked {
+			& + .Toggle-track {
+				background-color: var(--brandColor-secondary);
+
+				&:after {
+					left: calc(100% - #{$Toggle-badgeSize + $Toggle-badgeSize-gap});
+				}
+			}
+	}
+}

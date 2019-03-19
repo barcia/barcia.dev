@@ -15,7 +15,7 @@
 		&-link {
 			@include voidLink;
 			@include hoverFocusActive {
-				color: color(secondary);
+				color: var(--brandColor-secondary);
 			}
 		}
 
@@ -30,7 +30,7 @@
 		&-metadata {
 			margin-top: 0px;
 			font-size: 0.95em;
-			color: $grey-400;
+			color: var(--fontColor--light);
 		}
 
 		&-tagList {
@@ -60,7 +60,7 @@
 
 			span {
 				&::before {
-					color: $grey-200;
+					color: var(--fontColor--lighter);
 					content: "#";
 				}
 			}
@@ -103,7 +103,7 @@
 	&-metadata {
 		flex: 1;
 		margin-bottom: 30px;
-		color: $grey-400;
+		color: var(--fontColor--light);
 		@include from(small) {
 			margin-bottom: 0;
 		}

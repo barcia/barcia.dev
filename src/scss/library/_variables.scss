@@ -69,3 +69,54 @@ $time: (
 @function time($key) {
 	@return map-get($time, $key);
 }
+
+
+// CUSTOM PROPERTIES
+// stylelint-disable declaration-colon-space-before
+:root {
+	// Background color
+	--bgColor         : #{$white};
+	--bgColor-light   : #{$grey-50};
+	--bgColor-translucid   : #{$alpha-w-900};
+
+	--bgColor-onHover : #{black(0.1)};
+	--bgColor-onActive: #{black(0.2)};
+
+	--brandColor-primary: #{$royal-blue};
+	--brandColor-secondary: #{$sunglo};
+
+	// Font color
+	--fontColor             : #{$grey-800};
+	--fontColor--light      : #{$grey-500};
+	--fontColor--lighter    : #{$grey-300};
+	--fontColor--dark       : #{$grey-900};
+	--fontColor-alpha--black: #{black(0.4)};
+	--fontColor-alpha--white: #{white(0.4)};
+
+	// Basic color
+	--blue  : #{$royal-blue};
+	--green : #{$nephritis};
+	--orange: #{$carrot-500};
+	--pink  : #{$peach-colored};
+	--purple: #{$bellflower};
+	--red   : #{$pure-crimson};
+	--yellow: #{$sandstorm};
+
+	// @include colorSchemeDark {
+	// 	--bgColor         : #{$oc-grey-800};
+	// }
+}
+
+@include colorSchemeDark {
+	--bgColor         : #{$oc-grey-900};
+	--bgColor-light   : #{$oc-grey-850};
+	--bgColor-translucid   : #{transparentize($oc-grey-900, 0.1)};
+
+	--brandColor-primary: #{tint($royal-blue, 20%)};
+	--brandColor-secondary: #{tint($sunglo, 15%)};
+
+	--fontColor             : #{$grey-50};
+	--fontColor--light      : #{$grey-300};
+	--fontColor--lighter    : #{$grey-600};
+}
+// stylelint-enable

@@ -13,12 +13,13 @@
 	padding: 12px;
 	border-radius: 5px;
 	background-color: var(--bgColor);
+	border: 1px solid var(--bgColor-light);
 
 	&-metadata {
 		display: flex;
 		align-items: center;
 		font-size: 0.9em;
-		color: $grey-300;
+		color: var(--fontColor--light);
 	}
 
 	&-links {
@@ -41,8 +42,9 @@
 
 		@include hoverFocusActive {
 			color: inherit;
+			text-decoration: none;
 			&::before {
-				color: color(secondary);
+				color: var(--brandColor-secondary);
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 ---
 title: Crear entorno de desarrollo WordPress con Docker
-date: 2018-03-12
+date: 2018-03-12T00:00:00+01:00
 tags: ["wordpress"]
 ---
 

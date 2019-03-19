@@ -1,16 +1,15 @@
 {
 	"name": "barcia.dev",
-	"version": "1.0.0-beta.1",
+	"version": "1.0.0-beta.3",
 	"license": "MIT",
-	"description": "My website",
 	"homepage": "https://barcia.dev",
 	"repository": "https://github.com/barcia/barcia.dev",
-	"bugs": "https://github.com/barcia/barcia.dev/issues",
 	"private": true,
 	"author": "Iván Barcia <ivan@barcia.dev> (https://barcia.dev)",
 	"scripts": {
-		"start": "gulp watch & eleventy --serve",
-		"build": "gulp build && eleventy"
+		"start": "gulp watch & eleventy --serve --quiet",
+		"build": "gulp build && eleventy",
+		"debug": "DEBUG=Eleventy* eleventy"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^0.7.1",
@@ -34,8 +33,7 @@
 		"luxon": "^1.11.4",
 		"markdown-it": "^8.4.2",
 		"node-sass": "^4.11.0",
-		"shelljs": "^0.8.3",
-		"standarize": "^2.0.0",
+		"standarize": "^2.0.1",
 		"stylelint": "^9.10.1",
 		"stylelint-config-recommended": "^2.1.0",
 		"stylelint-order": "^2.1.0",

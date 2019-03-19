@@ -11,7 +11,6 @@
 		flex-direction: column;
 		margin-top: calc(var(--Navbar-height));
 		padding: 30px $wrapper-margin-x 50px;
-		// @include backgroundImage("/assets/back.svg");
 
 
 		@include from(small) {
@@ -26,7 +25,7 @@
 	&-name {
 		font-size: 3em;
 		margin: 0 0 20px;
-		color: color(primary);
+		color: var(--brandColor-primary);
 	}
 
 	&-work {
@@ -37,7 +36,7 @@
 
 	&-interests {
 		font-size: 2em;
-		color: $grey-400;
+		color: var(--fontColor--light);
 		line-height: 1em;
 
 	@include from(small) {

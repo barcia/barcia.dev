@@ -1,6 +1,6 @@
 ---
 title: Orden de carga en JavaScript
-date: 2018-10-12
+date: 2018-10-12T00:00:00+01:00
 tags: ["js", "wpo"]
 ---
 

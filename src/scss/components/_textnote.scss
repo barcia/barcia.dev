@@ -1,0 +1,11 @@
+.textNote {
+	background-color: tint($oc-blue-100, 50%);
+	color: $oc-blue-800;
+	padding: 10px;
+  font-size: .9em;
+	border-left: 4px solid $oc-blue-800;
+
+	a {
+		color: $oc-blue-500;
+	}
+}

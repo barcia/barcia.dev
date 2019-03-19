@@ -1,8 +1,6 @@
 const config = require('./paths.json');
 const gulp = require('gulp');
 const browsersync = require('browser-sync').create();
-const shell = require('shelljs');
-var exec = require('child_process').exec;
 
 const css = require('./css');
 const img = require('./images');

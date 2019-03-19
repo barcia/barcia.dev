@@ -1,6 +1,5 @@
 {
 	"layout": "layouts/article",
 	"permalink": "articles/{{ page.fileSlug }}/index.html",
-	"tags": ["article"],
 	"lang": "es"
 }

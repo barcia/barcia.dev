@@ -10,17 +10,9 @@
 	margin-bottom: 100px;
 	max-width: $wrapper-width;
 	margin-top: calc(var(--Navbar-height) + 20px);
+	transition: time(normal) margin-top ease-in-out;
 	@include marginX($wrapper-margin-x);
 	@include from($wrapper-width + ($wrapper-margin-x * 2)) {
 		@include marginX(auto);
 	}
 }
-
-// .wrapper-small {
-// 	margin-bottom: 100px;
-// 	max-width: 700px;
-// 	@include marginX(8px);
-// 	@include from(700px + (8px * 2)) {
-// 		@include marginX(auto);
-// 	}
-// }

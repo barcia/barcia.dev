@@ -1,7 +1,7 @@
 /* $FOOTER */
 
 .footer {
-	background-color: $grey-50;
+	background-color: var(--bgColor-light);
 	padding: 40px 12px 20px;
 	margin-top: auto;
 
@@ -20,7 +20,7 @@
 		}
 
 		a {
-			color: $grey-500;
+			color: var(--fontColor--light);
 			@include hoverFocusActive {
 				color: color(primary);
 			}
@@ -70,10 +70,10 @@
 		font-size: 0.85em;
 		text-align: center;
 		margin-top: 30px;
-		color: $grey-300;
+		color: var(--fontColor--lighter);
 
 		a {
-			color: $grey-300;
+			color: var(--fontColor--lighter);
 			white-space: nowrap;
 			@include hoverFocusActive {
 				color: color(primary);

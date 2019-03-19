@@ -1,6 +1,6 @@
 ---
 title: Crear un repositorio Git en Dropbox, Google Drive o en un USB
-date: 2018-03-26
+date: 2018-03-26T00:00:00+01:00
 tags: ["resources"]
 ---
 

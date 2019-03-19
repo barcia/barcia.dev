@@ -7,15 +7,14 @@
 				<li><a href="{{projects.browserdom.repository}}" target="blank">{{projects.browserdom.name}}</a></li>
 			</ul>
 			<div class="footer-rightMenu">
+				<label class="Toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+					<input class="Toggle-input" type="checkbox" id="darkMode"/>
+					<span class="Toggle-track"></span>
+					<span class="Toggle-label">Dark mode</span>
+				</label>
 				<div class="footer-now">
 					<a href="{{ site.now }}">⏱Now</a>
 				</div>
-				{# <div>
-					<label for="">
-						<input type="checkbox" name="" id="">
-						Dark mode
-					</label>
-				</div> #}
 				<address class="footer-contact">
 					<a class="footer-contact-mail" href="mailto:ivan@barcia.dev" aria-label="Enviar email a {{site.author.name}}">ivan@barcia.dev</a>
 					<div>

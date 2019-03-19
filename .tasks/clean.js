@@ -1,8 +1,8 @@
-const contig = require('./paths.json');
-const shell = require('shelljs');
+const config = require('./paths.json');
+var exec = require('child_process').exec;
 
 
 module.exports = function(done) {
-	shell.rm('-rf', contig.dist + '*');
+	exec('rm -rf ' + config.dist + '*');
 	done();
 }

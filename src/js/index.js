@@ -1,5 +1,5 @@
 // Font
-// import './fonts';
+import './dark';
 
 // BrowserDOM
 import BrowserDOM from 'browserdom';

@@ -8,10 +8,17 @@
 			<h1 class="post-title">Note {{ page.fileSlug }}</h1>
 		</header>
 
-		<article id="{{ page.fileSlug }}" class="note">
+		<article id="{{ page.fileSlug }}" class="Note{% if type %} Note--{{type}}{% endif %}{% if contrast %} Note--{{contrast}}{% endif %}">
 			<div>{{ content | safe }}</div>
-			<div class="note-metadata">
-				<time class="note-date" datetime="{{ date | dateTo('iso') }}" title="{{ date | dateTo("dd LLLL, yyyy - HH:mm") }}">{{ date | dateTo("dd MMMM, yyyy") }}</time>
+			<div class="Note-metadata">
+				<time class="Note-date" datetime="{{ date | dateTo('iso') }}" title="{{ date | dateTo("dd LLLL, yyyy - HH:mm") }}">{{ date | dateTo("dd MMMM, yyyy") }}</time>
+				<span class="Note-links">
+				{% if twitter %}
+					<a href="{{ url.twitter.root }}{{ site.author.twitter }}{{ url.twitter.status }}{{ twitter }}" target="blank">
+						<img src="/assets/social/twitter.svg" alt="">
+					</a>
+				{% endif %}
+				</span>
 			</div>
 		</article>
 </main>

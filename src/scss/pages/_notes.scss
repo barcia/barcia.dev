@@ -8,12 +8,14 @@
 	}
 }
 
-.note {
+.Note {
 	@include boxShadow(2);
+	position: relative;
 	padding: 12px;
-	border-radius: 5px;
-	background-color: var(--bgColor);
 	border: 1px solid var(--bgColor-light);
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: var(--bgColor);
 
 	&-metadata {
 		display: flex;
@@ -61,6 +63,32 @@
 		list-style-type: disc;
 		&:not(:last-child) {
 			margin-bottom: 1em;
+		}
+	}
+
+
+
+	// Note variants
+	&--media {
+		padding: 0;
+
+		.Note-metadata {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding: 12px;
+		}
+	}
+
+	&--white {
+		.Note-metadata {
+			color: $white;
+		}
+	}
+
+	&--black {
+		.Note-metadata {
+			color: $grey-900;
 		}
 	}
 }

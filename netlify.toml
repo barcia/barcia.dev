@@ -10,5 +10,5 @@
   to = "/articles/feed.xml"
 
 [[redirects]]
-  from = "*/feed"
-  to = ":splat/feed.xml"
+  from = "/*/feed"
+  to = "/:splat/feed.xml"

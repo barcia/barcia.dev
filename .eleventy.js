@@ -24,11 +24,11 @@ module.exports = function(eleventyConfig) {
 
 	// Collections
 	eleventyConfig.addCollection('articles', collection => {
-		return collection.getFilteredByGlob('src/web/articles/*.md').reverse()
+		return collection.getFilteredByGlob('src/_content/articles/*.md').reverse()
 	})
 
 	eleventyConfig.addCollection('notes', collection => {
-		return collection.getFilteredByGlob(['src/web/notes/*.md']).reverse()
+		return collection.getFilteredByGlob(['src/_content/notes/*.md']).reverse()
 	})
 
 
@@ -58,13 +58,13 @@ module.exports = function(eleventyConfig) {
 		eleventyConfig.setLibrary('md', md);
 		eleventyConfig.addFilter('markdownify', str => md.render(str));
 
-		eleventyConfig.addPairedShortcode("textnote", require("./src/web/_includes/shortcodes/textnote"));
+		eleventyConfig.addPairedShortcode("textnote", require("./src/_includes/shortcodes/textnote"));
 
 
 
     return {
         dir: {
-            input: "src/web",
+            input: "src",
 						output: "dist"
 				},
 				htmlTemplateEngine : "njk",

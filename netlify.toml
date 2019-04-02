@@ -4,3 +4,11 @@
 
 # [context.production.environment]
 #   NODE_ICU_DATA = "$(pwd)/node_modules/full-icu"
+
+[[redirects]]
+  from = "/feed"
+  to = "/articles/feed.xml"
+
+[[redirects]]
+  from = "*/feed"
+  to = ":splat/feed.xml"

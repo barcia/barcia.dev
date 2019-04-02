@@ -1,6 +1,6 @@
 {
 	"name": "barcia.dev",
-	"version": "1.0.0-beta.3",
+	"version": "1.0.0-beta.4",
 	"license": "MIT",
 	"homepage": "https://barcia.dev",
 	"repository": "https://github.com/barcia/barcia.dev",
@@ -9,7 +9,9 @@
 	"scripts": {
 		"start": "gulp watch & eleventy --serve --quiet",
 		"build": "gulp build && eleventy",
-		"debug": "DEBUG=Eleventy* eleventy"
+		"debug": "DEBUG=Eleventy* eleventy",
+		"prebuild": "rm -rf ./dist/*",
+		"prestart": "rm -rf ./dist/*"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^0.7.1",
@@ -39,6 +41,5 @@
 		"stylelint-order": "^2.1.0",
 		"stylelint-scss": "^3.5.4",
 		"webpack-stream": "^5.2.1"
-	},
-	"dependencies": {}
+	}
 }

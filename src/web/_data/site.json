@@ -6,6 +6,7 @@
 		"articles": "/articles/feed.xml",
 		"notes": "/notes/feed.xml"
 	},
+	"sitemap": "/sitemap.xml",
 	"now": "/now/",
 	"author": {
 		"name": "Iván Barcia",

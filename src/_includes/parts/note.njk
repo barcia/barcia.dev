@@ -5,9 +5,14 @@
 	<div class="Note-metadata">
 		<time class="Note-date" datetime="{{ note.date | dateTo('iso') }}" title="{{ note.date | dateTo("dd LLLL, yyyy - HH:mm") }}">{{ note.date | dateTo("dd MMMM, yyyy") }}</time>
 		<span class="Note-links">
+		{% if note.data.github %}
+			<a href="{{ note.data.github }}" target="blank" aria-label="View in GitHub" title="View in GitHub">
+				<img src="/assets/social/github.svg" alt="GitHub logo">
+			</a>
+		{% endif %}
 		{% if note.data.twitter %}
-			<a href="{{ url.twitter.root }}{{ site.author.twitter }}{{ url.twitter.status }}{{ note.data.twitter }}" target="blank">
-				<img src="/assets/social/twitter.svg" alt="">
+			<a href="{{ url.twitter.root }}{{ site.author.twitter }}{{ url.twitter.status }}{{ note.data.twitter }}" target="blank" aria-label="View in Twitter" title="View in Twitter">
+				<img src="/assets/social/twitter.svg" alt="Twitter logo">
 			</a>
 		{% endif %}
 		</span>

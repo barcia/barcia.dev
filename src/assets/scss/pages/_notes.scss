@@ -25,19 +25,24 @@
 	}
 
 	&-links {
+		display: flex;
+		margin-left: auto;
+
 		a {
-			display: flex;
-			margin: 0 10px;
+			display: inline-flex;
+			margin: 0 8px;
 		}
 
 		img {
-			@include size(14px);
+			@include size(16px);
 		}
 	}
 
 	&-id {
 		color: inherit;
 		text-decoration: none;
+		margin-left: 5px;
+
 		&::before {
 			content: "#";
 		}
@@ -49,10 +54,6 @@
 				color: var(--brandColor-secondary);
 			}
 		}
-	}
-
-	&-date {
-		flex: 1;
 	}
 
 	@include from(medium) {

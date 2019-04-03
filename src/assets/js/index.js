@@ -1,4 +1,5 @@
 // Font
+import './fonts';
 import './analytics';
 import './dark';
 

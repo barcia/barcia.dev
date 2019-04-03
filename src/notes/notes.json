@@ -1,5 +1,6 @@
 {
 	"layout": "layouts/note",
+	"description": "A simple note",
 	"permalink": "notes/{{ page.fileSlug }}/index.html",
 	"lang": "es"
 }

@@ -24,11 +24,11 @@ module.exports = function(eleventyConfig) {
 
 	// Collections
 	eleventyConfig.addCollection('articles', collection => {
-		return collection.getFilteredByGlob('src/_content/articles/*.md').reverse()
+		return collection.getFilteredByGlob('src/articles/*.md').reverse()
 	})
 
 	eleventyConfig.addCollection('notes', collection => {
-		return collection.getFilteredByGlob(['src/_content/notes/*.md']).reverse()
+		return collection.getFilteredByGlob(['src/notes/*.md']).reverse()
 	})
 
 

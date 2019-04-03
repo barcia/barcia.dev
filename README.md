@@ -9,13 +9,16 @@ My website as frontend developer. Built with [Eleventy](https://www.11ty.io) and
 ```yaml
 ---
 date: 2019-03-30T12:48:08+01:00
-type: media
-contrast: white
+class:
+  - media
+  - white
 twitter: "1111363405317894145"
 github: "https://github.com/barcia/barcia.dev/file"
 lang: "es"
 ---
 ```
+
+All classes include by default the `Note--`prefix
 
 
 ### Shorcodes

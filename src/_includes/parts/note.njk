@@ -1,6 +1,4 @@
-{%- set isDetailView = layout == 'layouts/note' -%}
-
-<article id="{{note.fileSlug}}" class="Note{% if note.data.type %} Note--{{note.data.type}}{% endif %}{% if note.data.contrast %} Note--{{note.data.contrast}}{% endif %}" data-detail="{{ isDetailView }}">
+<article id="{{note.fileSlug}}" class="Note{% for class in note.data.class %} Note--{{ class }} {% endfor %}">
 	<div>{{ note.templateContent | safe }}</div>
 	<div class="Note-metadata">
 		<time class="Note-date" datetime="{{ note.date | dateTo('iso') }}" title="{{ note.date | dateTo("dd LLLL, yyyy - HH:mm") }}">{{ note.date | dateTo("dd MMMM, yyyy") }}</time>

@@ -15,6 +15,7 @@ twitter: "1111363405317894145"
 ---
 ```
 
+
 ### Shorcodes
 * textNotes
   ```
@@ -22,6 +23,15 @@ twitter: "1111363405317894145"
   This is a text note
   {% endtextnote %}
   ```
+
+
+### Misc
+#### Analytics
+You can disable Google Analytics in your browser writing in the console the function:
+```js
+respectMyPrivacy()
+```
+
 
 ## License
 The source code is under [MIT License](https://github.com/barcia/bramework/blob/master/LICENSE).

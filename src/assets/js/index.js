@@ -1,4 +1,5 @@
 // Font
+import './analytics';
 import './dark';
 
 // BrowserDOM

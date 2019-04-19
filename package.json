@@ -1,6 +1,6 @@
 {
 	"name": "barcia.dev",
-	"version": "1.0.0-beta.4",
+	"version": "1.0.0-beta.5",
 	"license": "MIT",
 	"homepage": "https://barcia.dev",
 	"repository": "https://github.com/barcia/barcia.dev",
@@ -10,6 +10,8 @@
 		"start": "gulp watch & eleventy --serve --quiet",
 		"build": "gulp build && eleventy",
 		"debug": "DEBUG=Eleventy* eleventy",
+		"create:note": "gulp create_note",
+		"create:article": "gulp create_article",
 		"clean": "rm -rf ./dist/*",
 		"prebuild": "npm run clean",
 		"prestart": "npm run clean"
@@ -35,6 +37,7 @@
 		"gulp-stylelint": "^8.0.0",
 		"luxon": "^1.12.0",
 		"markdown-it": "^8.4.2",
+		"nanoid": "^2.0.1",
 		"node-sass": "^4.11.0",
 		"standarize": "^3.0.0",
 		"stylelint": "^9.10.1",

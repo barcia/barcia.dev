@@ -12,3 +12,23 @@
 [[redirects]]
   from = "/*/feed"
   to = "/:splat/feed.xml"
+
+[[redirects]]
+  from = "/notes/1"
+  to = "/notes/QMAtLrfj"
+
+[[redirects]]
+  from = "/notes/2"
+  to = "/notes/dBJHy2Uk"
+
+[[redirects]]
+  from = "/notes/3"
+  to = "/notes/xadLy8pp"
+
+[[redirects]]
+  from = "/notes/4"
+  to = "/notes/9b57tsK4"
+
+[[redirects]]
+  from = "/notes/5"
+  to = "/notes/kmg3tUwz"

@@ -1,4 +1,6 @@
 {
 	"dist": "./dist/",
-	"assets": "./dist/assets/"
+	"assets": "./dist/assets/",
+	"notes": "./src/notes/",
+	"articles": "./src/articles/"
 }

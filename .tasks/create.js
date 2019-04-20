@@ -2,7 +2,7 @@ const config = require('./paths.json');
 const fs = require('fs');
 const { DateTime } = require("luxon");
 const generate = require('nanoid/generate');
-const alphabet = "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstwxyz";
+const alphabet = "123456789abcdefghijklmnpqrstuvwxyz";
 
 
 module.exports = {

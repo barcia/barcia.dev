@@ -5,7 +5,7 @@
 
 <main class="wrapper">
 		<header>
-			<h1 class="post-title">Note {{ page.fileSlug }}</h1>
+			<h1 class="note-title">{{ page.fileSlug }}</h1>
 		</header>
 
 		<article id="{{ page.fileSlug }}" class="Note{% for class in class %} Note--{{ class }} {% endfor %}">
@@ -14,11 +14,6 @@
 			<div class="Note-metadata">
 				<time class="Note-date" datetime="{{ date | dateTo('iso') }}" title="{{ date | dateTo("dd LLLL, yyyy - HH:mm") }}">{{ date | dateTo("dd MMMM, yyyy") }}</time>
 				<span class="Note-links">
-				{% if github %}
-					<a href="{{ github }}" target="blank" aria-label="View in GitHub" title="View in GitHub">
-						<img src="/assets/social/github.svg" alt="GitHub logo">
-					</a>
-				{% endif %}
 				{% if twitter %}
 					<a href="{{ url.twitter.root }}{{ site.author.twitter }}{{ url.twitter.status }}{{ twitter }}" target="blank" title="View in Twitter">
 						<img src="/assets/social/twitter.svg" alt="Twitter logo">

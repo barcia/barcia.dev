@@ -8,6 +8,18 @@
 	}
 }
 
+.note {
+	&-title {
+		text-align: center;
+		font-size: 1.4em;
+		margin-bottom: 1em;
+		// color: var(--fontColor--lighter);
+		@include from(medium) {
+			font-size: 1.8em;
+		}
+	}
+}
+
 .Note {
 	@include boxShadow(2);
 	position: relative;

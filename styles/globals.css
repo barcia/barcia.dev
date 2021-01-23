@@ -1,9 +1,31 @@
+:root {
+  --brandColor-primary: #4183d7;
+  --fontColor--light: grey;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --brandColor-primary: #679cdf;
+  }
+} */
+
+html {
+  height: -webkit-fill-available;
+  font-size: 18px;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'overpass', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 a {
@@ -13,4 +35,26 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* a {
+  color: var(--brandColor-primary);
+} */
+
+@font-face {
+  font-family: 'overpass';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local('overpass'),
+       url('/fonts/overpass/overpass-regular.otf');
+}
+
+@font-face {
+  font-family: 'overpass';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local('overpass'),
+       url('/fonts/overpass/overpass-bold.otf');
 }

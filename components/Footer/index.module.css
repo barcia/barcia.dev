@@ -1,10 +1,16 @@
 .footer {
   width: 100%;
   height: 100px;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid hsl(0, 0%, 92%);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer {
+    border-top-color: hsl(0, 0%, 15%);
+  }
 }
 
 .content {

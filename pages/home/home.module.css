@@ -55,6 +55,9 @@
     }
 }
 
+.figma {
+    --socialImageUrl: url("/figma.svg");
+}
 .linkedin {
     --socialImageUrl: url("/linkedin.svg");
 }

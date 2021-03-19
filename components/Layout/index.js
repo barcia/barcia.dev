@@ -1,8 +1,17 @@
 import styles from './index.module.css'
 import Footer from '../Footer'
-import Link from 'next/link'
+import { useEffect } from 'react';
 
 export default function Layout({children}) {
+
+    useEffect(() => {
+        const appHeight = () => {
+            const doc = document.documentElement
+            doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+        }
+        window.addEventListener('resize', appHeight)
+        appHeight()
+    });
 
     const menu = [
         {

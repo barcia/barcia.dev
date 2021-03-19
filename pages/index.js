@@ -1,7 +1,7 @@
 import fs from 'fs';
-import Head from 'next/head'
 import Layout from '../components/Layout'
 import style from './home/home.module.css'
+import darkMode from '../states/darkmode'
 
 export default function Home({ strings }) {
   return (
@@ -12,12 +12,16 @@ export default function Home({ strings }) {
         <p className={style.interests}>{strings.interests}</p>
         <div className={style.social}>
           <a className={style.github} href="https://github.com/barcia" aria-label={strings.social.github} target="_blank" rel="noopener nofollow">
+            <img src={ darkMode() ? "/github-white.svg" : "/github.svg"} alt={strings.social.github} />
           </a>
           <a className={style.figma} href="https://www.figma.com/@barcia" aria-label={strings.social.figma} target="_blank" rel="noopener nofollow">
+            <img src="/figma.svg" alt={strings.social.figma} />
           </a>
           <a className={style.linkedin} href="https://www.linkedin.com/in/ivanbarcia" aria-label={strings.social.linkedin} target="_blank" rel="noopener nofollow">
+            <img src="/linkedin.svg" alt={strings.social.linkedin} />
           </a>
           <a className={style.twitter} href="https://twitter.com/ivarcia" aria-label={strings.social.twitter} target="_blank" rel="noopener nofollow">
+            <img src="/twitter.svg" alt={strings.social.twitter} />
           </a>
         </div>
 

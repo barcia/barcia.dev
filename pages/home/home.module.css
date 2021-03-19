@@ -35,34 +35,51 @@
 }
 
 .social a {
-    margin: 8px;
+    margin: 2px;
     display: flex;
-    height: 35px;
-    width: 35px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-image: var(--socialImageUrl);
+    padding: 12px;
+    border-radius: 16px;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
 }
 
-.github {
-    --socialImageUrl: url("/github.svg");
+.social a:hover {
+    transition-timing-function: ease-out;
+}
+
+
+
+.social a img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.github:hover {
+    background-color: rgb(24 23 23 / 20%);
+    box-shadow: 0 0 15px rgb(24 23 23 / 30%);
+
 }
 
 @media (prefers-color-scheme: dark) {
-    .github {
-        --socialImageUrl: url("/github-white.svg");
+    .github:hover {
+        background-color: rgb(255 255 255 / 20%);
+        box-shadow: 0 0 15px rgb(255 255 255 / 30%);
     }
 }
 
-.figma {
-    --socialImageUrl: url("/figma.svg");
+.figma:hover {
+    background-color: rgb(242 77 29 / 20%);
+    box-shadow: 0 0 15px rgb(242 77 29 / 30%);
 }
-.linkedin {
-    --socialImageUrl: url("/linkedin.svg");
+.linkedin:hover {
+    background-color: rgb(11 101 194 / 20%);
+    box-shadow: 0 0 15px rgb(11 101 194 / 30%);
+
 }
-.twitter {
-    --socialImageUrl: url("/twitter.svg");
+.twitter:hover {
+    background-color: rgb(29 161 241 / 20%);
+    box-shadow: 0 0 15px rgb(29 161 241 / 30%);
+
 }
 
 

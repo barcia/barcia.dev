@@ -1,0 +1,29 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Position from '@/components/Position.astro';
+const work = await getCollection('work');
+---
+
+<section>
+	<h2>Work</h2>
+
+	<ul>
+		{work.map((position) => (
+			<li>
+				<Position position={position} />
+			</li>
+		)
+		)}
+	</ul>
+</section>
+
+<style>
+	ul	{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+</style>

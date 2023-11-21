@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+
+const { position } = Astro.props
+---
+
+<article>
+	<header>
+		<h3 aria-label={ position.data.name }>
+			<Image src={position.data.logo} alt={position.data.name} height={32} />
+		</h3>
+		<div>
+			<time datetime={position.data.date_start}>{position.data.date_start}</time>
+			<time datetime={position.data.date_start}>{position.data.date_end || 'current'}</time>
+		</div>
+	</header>
+	<div>{ position.data.description }</div>
+</article>
+
+<style>
+	h3 {
+		margin: 0;
+	}
+
+	time {
+		display: inline-block;
+		font-size: 0.8em;
+		text-transform: uppercase;
+		opacity: 0.5;
+	}
+</style>

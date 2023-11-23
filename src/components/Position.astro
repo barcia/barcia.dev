@@ -2,30 +2,45 @@
 import { Image } from 'astro:assets';
 
 const { position } = Astro.props
+const { Content } = await position.render();
 ---
 
-<article>
+<article id={position.slug}>
 	<header>
 		<h3 aria-label={ position.data.name }>
 			<Image src={position.data.logo} alt={position.data.name} height={32} />
 		</h3>
-		<div>
+		<div class="dates">
 			<time datetime={position.data.date_start}>{position.data.date_start}</time>
+			<span> - </span>
 			<time datetime={position.data.date_start}>{position.data.date_end || 'current'}</time>
 		</div>
 	</header>
-	<div>{ position.data.description }</div>
+	<Content />
 </article>
 
 <style>
+	header {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
 	h3 {
 		margin: 0;
 	}
 
-	time {
-		display: inline-block;
+	img {
+		height: 2rem;
+		width: auto;
+	}
+
+	#redradix img {
+		height: 1.5rem;
+	}
+
+	.dates {
 		font-size: 0.8em;
 		text-transform: uppercase;
-		opacity: 0.5;
+		color: var(--text-color-light);
 	}
 </style>

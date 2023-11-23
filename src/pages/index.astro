@@ -1,18 +1,90 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Work from '@/sections/Work.astro';
+import Contact from "@/sections/Contact.astro";
+import Layout from "../layouts/Layout.astro";
+import Work from "@/sections/Work.astro";
 ---
 
-<Layout title="Iván Barcia">
-	<main>
-		<header>
-			<h1>Hi, I am Iván</h1>
-			<p>Web designer and developer. Interested in CSS, JavaScript, design, UX, digital products development, design systems, and all about frontend stuff.</p>
-		</header>
-		<Work />
-	</main>
+<Layout title="Iván Barcia. UI Engineer.">
+	<header>
+		<h1>
+			<span>Hi, I am Iván Barcia,</span>
+			<span>a UI engineer based in Galicia, northwest Spain.</span>
+		</h1>
+		<p>
+			I am interested in CSS, JavaScript, design, digital products
+			development, and all about frontend stuff.
+		</p>
+		<p>
+			Currently, I <a href="#work">work</a> as a UI engineer at RedRadix,
+			and these days it's common for me to work with frameworks like
+			Next.js, Astro, and Shopify.
+		</p>
+
+		<details>
+			<summary>More</summary>
+			<p>I have several years of experience working on the web. I am passionate about everything related to interface creation, programming, and the development of digital products. My strongest skills lie in web technologies such as HTML, CSS, JavaScript, Accessibility, Web Standards, etc., and I have worked with the main tools associated with these technologies.</p>
+
+			<p>But I don't believe that the tool is the most important thing. I love trying out new technologies and continuously learning.</p>
+
+			<p>I am also very interested in design, and I don't see the web development process as always linear. Instead, I believe that disciplines like design and development should constantly overlap and provide feedback to each other. Having knowledge in both disciplines greatly helps me excel in each of them. I particularly enjoy working with design systems.</p>
+
+			<p>To improve my design skills, I trained at the *Instituto Tramontana*, and for everything related to the web and programming, I am mostly self-taught. Design, design systems.</p>
+		</details>
+	</header>
+
+	<Work />
 </Layout>
 
 <style>
+	h1 {
+		display: inline-flex;
+		flex-direction: column;
+
+		& > span:first-child {
+			font-size: 3.5rem;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+
+		& > span:last-child {
+			font-size: 2rem;
+			color: var(--text-color-light);
+			font-weight: 200;
+		}
+	}
+
+	summary {
+		text-align: center;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.1rem;
+		font-size: 0.8rem;
+		color: var(--text-color-light);
+
+		&::marker {
+			content: none;
+		}
+
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		&[hidden] {
+			display: none;
+		}
+	}
+
+	header,
+	:global(section) {
+		margin-block: 4rem;
+
+		@media screen and (min-width: 768px) {
+			margin-block: 8rem;
+			
+		}
+	}
 
 </style>
+

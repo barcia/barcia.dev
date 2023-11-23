@@ -1,12 +1,12 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
 import Position from '@/components/Position.astro';
+import Section from '@/layouts/Section.astro';
 const work = await getCollection('work');
+work.sort((a, b) => b.data.date_start - a.data.date_start);
 ---
 
-<section>
-	<h2>Work</h2>
-
+<Section title="Work" id="work">
 	<ul>
 		{work.map((position) => (
 			<li>
@@ -15,7 +15,8 @@ const work = await getCollection('work');
 		)
 		)}
 	</ul>
-</section>
+</Section>
+
 
 <style>
 	ul	{

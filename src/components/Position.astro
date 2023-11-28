@@ -32,6 +32,10 @@ const { Content } = await position.render();
 	img {
 		height: 2rem;
 		width: auto;
+
+		@media (prefers-color-scheme: dark) {
+			filter: invert(1);
+		}
 	}
 
 	#redradix img {

@@ -64,6 +64,7 @@ import Speaking from "@/components/sections/Speaking.astro";
 		gap: 0.1rem;
 		font-size: 0.8rem;
 		color: var(--text-color-light);
+		padding: 1rem;
 
 		&::marker {
 			content: none;
@@ -92,22 +93,13 @@ import Speaking from "@/components/sections/Speaking.astro";
 
 <script>
 	const viewmore = document.querySelector('#viewmore');
-	const labelClosed = viewmore?.textContent
-	const labelOpened = viewmore?.getAttribute('aria-label-open')
-	const details = viewmore?.parentElement;
+	if (viewmore) {
+		const labelClosed = viewmore.textContent;
+		const labelOpened = viewmore.getAttribute('aria-label-open');
+		const details = viewmore.parentElement;
 
-	details?.addEventListener('toggle', () => {
-
-			const viewmore = document.querySelector('#viewmore');
-			if (viewmore) {
-				const labelClosed = viewmore.textContent;
-				const labelOpened = viewmore.getAttribute('aria-label-open');
-				const details = viewmore.parentElement;
-
-				details?.addEventListener('toggle', () => {
-					viewmore.textContent = (details as HTMLDetailsElement)?.open ? labelOpened! : labelClosed!;
-				});
-			}
-
+		details?.addEventListener('toggle', () => {
+			viewmore.textContent = (details as HTMLDetailsElement)?.open ? labelOpened : labelClosed;
 		});
+	}
 </script>

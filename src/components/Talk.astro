@@ -1,0 +1,51 @@
+---
+
+const { talk } = Astro.props
+const month = new Date(talk.data.date).toLocaleString('en-us', { month: 'long' })
+const year = new Date(talk.data.date).getFullYear()
+---
+
+<article>
+	<div>
+		<h3>{ talk.data.title }</h3>
+		<div class="event">{ talk.data.event }</div>
+	</div>
+	<time datetime="">{ month } - { year }</time>
+</article>
+
+<style>
+	article {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	h3 {
+		margin: 0 0 0.5rem;
+		font-size: 1.2rem;
+	}
+
+	.event {
+		color: var(--text-color-light);
+	
+	}
+
+	time {
+		font-size: 0.8em;
+		text-transform: uppercase;
+		color: var(--text-color-light);
+		flex-shrink: 0;
+	}
+
+	@media (max-width: 600px) {
+		article {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		time {
+			order: -1;
+			margin-bottom: 0.5rem;
+		}
+	}
+</style>

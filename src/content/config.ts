@@ -1,7 +1,7 @@
 import { defineCollection, z } from 'astro:content'
 
 // 2. Define your collection(s)
-const workCollections = defineCollection({
+const workCollection = defineCollection({
   type: 'content',
   schema: ({ image }) => z.object({
     name: z.string(),
@@ -11,6 +11,16 @@ const workCollections = defineCollection({
   }),
 });
 
+const speakingCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    title: z.string(),
+    event: z.string(),
+    date: z.date(),
+  }),
+});
+
 export const collections = {
-  'work': workCollections,
+  'work': workCollection,
+  'speaking': speakingCollection,
 };

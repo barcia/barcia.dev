@@ -1,0 +1,59 @@
+---
+import Section from '@/layouts/Section.astro';
+import IconMail from '@/components/icons/IconMail.astro';
+import IconGithub from '@/components/icons/IconGithub.astro';
+import IconLinkedin from '@/components/icons/IconLinkedin.astro';
+import IconFigma from '@/components/icons/IconFigma.astro';
+
+const links = [
+	{
+		name: 'LinkedIn',
+		url: 'https://linkedin.com/in/ivanbarcia/'
+	},
+	{
+		name: 'GitHub',
+		url: 'https://github.com/barcia'
+	},
+	{
+		name: 'Figma',
+		url: 'https://figma.com/@barcia'
+	},
+]
+---
+
+<Section title="Contact" id="contact">
+	<a href="mailto:ivan@barcia.dev"><IconMail /><span>ivan@barcia.dev</span></a>
+
+	<div class="social">
+		{ links.map(link => (
+			<a href={ link.url }>
+				{ link.name === 'LinkedIn' && <IconLinkedin /> }
+				{ link.name === 'GitHub' && <IconGithub /> }
+				{ link.name === 'Figma' && <IconFigma /> }
+				<span>{ link.name }</span>
+			</a>
+		))}
+	</div>
+</Section>
+
+<style>
+	.social {
+		display: flex;
+		gap: 1.5rem;
+		margin-top: 1rem;
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		color: var(--text-color-main);
+		text-decoration: none;
+
+		& > :global(svg) {
+			width: 20px;
+			height: 20px;
+			stroke: var(--text-color-light);
+		}
+	}
+</style>

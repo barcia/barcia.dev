@@ -1,7 +1,8 @@
 ---
-import Contact from "@/sections/Contact.astro";
+import Contact from "@/components/sections/Contact.astro";
 import Layout from "../layouts/Layout.astro";
-import Work from "@/sections/Work.astro";
+import Work from "@/components/sections/Work.astro";
+import Speaking from "@/components/sections/Speaking.astro";
 ---
 
 <Layout title="Iván Barcia. UI Engineer.">
@@ -31,8 +32,9 @@ import Work from "@/sections/Work.astro";
 			<p>To improve my design skills, I trained at the *Instituto Tramontana*, and for everything related to the web and programming, I am mostly self-taught. Design, design systems.</p>
 		</details>
 	</header>
-
 	<Work />
+	<Speaking />
+	<Contact />
 </Layout>
 
 <style>

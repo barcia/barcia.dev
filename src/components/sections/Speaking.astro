@@ -1,9 +1,9 @@
 ---
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import Talk from '@/components/Talk.astro';
 import Section from '@/layouts/Section.astro';
 const speaking = await getCollection('speaking');
-speaking.sort((a, b) => b.data.date - a.data.date);
+speaking.sort((a, b) => Number(b.data.date) - Number(a.data.date));
 ---
 
 <Section title="Speaking" id="speaking">

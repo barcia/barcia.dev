@@ -1,0 +1,38 @@
+---
+import Page from '@/layouts/Page.astro'
+
+import { getCollection, getEntry } from 'astro:content';
+
+const allIssues = await getCollection('newsletter');
+---
+
+<Page title="The Frontend Dispatch">
+	<p>The Frontend Dispatch is a monthly newsletter where I share the most relevant content or discoveries from the last month related to frontend or, more specifically, with UI Engineering. There are many similar newsletters, but this one has my personal focus on how I see this profession. Here you'll find content of web standards, design, tools, frameworks and libraries.</p>
+
+	<h3>Subscribe</h3>
+	<p>Subscribe to receive the next issues in your inbox.</p>
+	<form
+	action="https://buttondown.email/api/emails/embed-subscribe/ivanbarcia"
+	method="post"
+	target="popupwindow"
+	onsubmit="window.open('https://buttondown.email/ivanbarcia', 'popupwindow')"
+	class="embeddable-buttondown-form"
+  >
+	<label for="bd-email">Email</label>
+	<input type="email" name="email" id="bd-email" />
+	
+	<input type="submit" value="Subscribe" />
+	<input type="hidden" name="tag" value="web" />
+  </form>
+
+	<h3>Past issues</h3>
+	<ul>
+		{allIssues.map((issue) => (
+			<li>
+				<h3><a href={`${Astro.url.pathname}/${issue.slug}`}>Issue #{issue.slug}</a></h3>
+			</li>
+		))}
+	</ul>
+
+
+</Page>

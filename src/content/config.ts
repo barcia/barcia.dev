@@ -20,12 +20,12 @@ const speakingCollection = defineCollection({
   }),
 });
 
-const issuesCollection = defineCollection({
+const newsletterCollection = defineCollection({
   type: 'content',
 });
 
 export const collections = {
   'work': workCollection,
   'speaking': speakingCollection,
-  'issues': issuesCollection,
+  'newsletter': newsletterCollection,
 };

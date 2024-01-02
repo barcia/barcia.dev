@@ -8,7 +8,12 @@ const { month, year } = {
 	month: parsedDate.toLocaleString('default', { month: 'long' }),
 	year: parsedDate.getFullYear(),
 };
+const { Content } = await issue.render();
 ---
 <Layout title={'aaa'}>
   	<h1>{month} of {year}</h1>
+
+	<article>
+		<Content />
+	</article>
 </Layout>

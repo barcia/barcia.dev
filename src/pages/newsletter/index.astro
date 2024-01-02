@@ -3,7 +3,7 @@ import Page from '@/layouts/Page.astro'
 
 import { getCollection, getEntry } from 'astro:content';
 
-const allIssues = await getCollection('issues');
+const allIssues = await getCollection('newsletter');
 ---
 
 <Page title="The Frontend Dispatch">
@@ -29,7 +29,7 @@ const allIssues = await getCollection('issues');
 	<ul>
 		{allIssues.map((issue) => (
 			<li>
-				<h3><a href={`${Astro.url.pathname}/${issue.slug}`}>Issue #202401</a> - January of 2024</h3>
+				<h3><a href={`${Astro.url.pathname}/${issue.slug}`}>Issue #{issue.slug}</a></h3>
 			</li>
 		))}
 	</ul>

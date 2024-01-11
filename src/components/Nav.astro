@@ -63,7 +63,7 @@
 <script>
 	const nav = document.querySelector('nav');
 	let prevScrollPos = window.pageYOffset;
-	if (!nav) return;
+	if (nav) {
 	window.addEventListener('scroll', function() {
 		let currentScrollPos = window.pageYOffset;
 		if (currentScrollPos > 150) {
@@ -78,4 +78,5 @@
 		}
 
 	});
+	}
 </script>

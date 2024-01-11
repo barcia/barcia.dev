@@ -26,6 +26,12 @@
 		top: 0;
 		display: flex;
 		place-content: center;
+		transition: 400ms ease-in-out transform;
+	}
+
+	nav.scroll-down {
+		transform: translateY(-100%) scale(0.9);
+;
 	}
 
 	ul {
@@ -53,3 +59,23 @@
 	}
 
 </style>
+
+<script>
+	const nav = document.querySelector('nav');
+	let prevScrollPos = window.pageYOffset;
+
+	window.addEventListener('scroll', function() {
+		let currentScrollPos = window.pageYOffset;
+		if (currentScrollPos > 150) {
+			if (prevScrollPos > currentScrollPos) {
+				nav.classList.remove('scroll-down');
+			} else {
+				nav.classList.add('scroll-down');
+			}
+			prevScrollPos = currentScrollPos;
+		} else {
+			nav.classList.remove('scroll-down');
+		}
+
+	});
+</script>

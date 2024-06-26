@@ -21,7 +21,6 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Nav />
 		<main>
 			<div class="container">
 				<slot />
@@ -32,8 +31,18 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 
+	@font-face {
+		font-family: 'IBM Plex Mono';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts/IBMPlexMono-Regular.ttf') format('truetype');
+	}
+
 	:root {
+		
 		--neutral-100: hsl(0 0% 100%);
+		--neutral-95: hsl(0 0% 95%);
 		--neutral-90: hsl(0 0% 90%);
 		--neutral-80: hsl(0 0% 80%);
 		--neutral-70: hsl(0 0% 70%);
@@ -48,7 +57,9 @@ const { title } = Astro.props;
 
 		--text-color-main: var(--neutral-10);
 		--text-color-light: var(--neutral-50);
-		--bg: var(--neutral-100);
+		--bg: var(--neutral-95);
+
+		font-family: "IBM Plex Mono", system-ui, sans-serif;
 
 		@media (prefers-color-scheme: dark) {
 			--text-color-main: var(--neutral-90);
@@ -60,7 +71,6 @@ const { title } = Astro.props;
 
 
 	html {
-		font-family: system-ui, sans-serif;
 		color: var(--text-color-main);
 		scroll-behavior: smooth;
 	}

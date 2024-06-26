@@ -10,8 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.5.9",
-    "typescript": "^5.4.3",
+    "astro": "^4.11.2",
+    "typescript": "^5.5.2",
     "@barcia/corecss": "^6.1.0"
   }
 }

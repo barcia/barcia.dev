@@ -8,7 +8,7 @@ import Speaking from "@/components/sections/Speaking.astro";
 <Layout title="Iván Barcia. UI Engineer.">
 	<header>
 		<h1>
-			<span>Hi, I am Iván Barcia,</span>
+			<span>Hi, I am Iván Barcia</span>
 			<span>a UI engineer based in Galicia, northwest Spain.</span>
 		</h1>
 		<p>
@@ -40,13 +40,13 @@ import Speaking from "@/components/sections/Speaking.astro";
 		flex-direction: column;
 
 		& > span:first-child {
-			font-size: 3.5rem;
+			font-size: 3rem;
 			font-weight: 500;
 			line-height: 1.2;
 		}
 
 		& > span:last-child {
-			font-size: 2rem;
+			font-size: 1.8rem;
 			color: var(--text-color-light);
 			font-weight: 200;
 		}
@@ -78,10 +78,10 @@ import Speaking from "@/components/sections/Speaking.astro";
 
 	header,
 	:global(section) {
-		margin-block: 4rem;
+		padding-block: 2rem;
 
 		@media screen and (min-width: 768px) {
-			margin-block: 8rem;
+			padding-block: 3rem;
 			
 		}
 	}

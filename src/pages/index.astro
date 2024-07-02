@@ -87,16 +87,3 @@ import Speaking from "@/components/sections/Speaking.astro";
 	}
 
 </style>
-
-<script>
-	const viewmore = document.querySelector('#viewmore');
-	if (viewmore) {
-		const labelClosed = viewmore.textContent;
-		const labelOpened = viewmore.getAttribute('aria-label-open');
-		const details = viewmore.parentElement;
-
-		details?.addEventListener('toggle', () => {
-			viewmore.textContent = (details as HTMLDetailsElement)?.open ? labelOpened : labelClosed;
-		});
-	}
-</script>

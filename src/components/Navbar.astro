@@ -1,0 +1,106 @@
+---
+import { ROUTES } from "@/assets/contants";
+import Drawer from "@/components/Drawer.astro";
+
+const { pathname } = Astro.url;
+
+const MENU = [
+    {
+        label: "work",
+        url: ROUTES.home,
+    },
+    {
+        label: "about",
+        url: ROUTES.about,
+    },
+    {
+        label: "now",
+        url: ROUTES.now,
+    },
+    // {
+    //     label: "blog",
+    //     url: ROUTES.blog,
+    // },
+    // {
+    //     label: "newsletter",
+    //     url: ROUTES.newsletter,
+    // },
+];
+---
+
+<nav>
+    <div class="Container">
+        <div class="Menu">
+            <a class="Menu-home" href={ROUTES.home}>home</a>
+            <div class="Menu-desktop">
+                <ul>
+                    {
+                        MENU.map((item) => (
+                            <li>
+                                <a href={item.url}>{item.label}</a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+            <div class="Menu-mobile">
+                <Drawer>
+                    <ul class="Drawer-menu">
+                        {
+                            MENU.map((item) => (
+                                <li>
+                                    <a data-astro-reload href={item.url}>
+                                        {item.label}
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </Drawer>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .Menu {
+        padding: var(--size-7) 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Menu-desktop {
+        margin-left: auto;
+        display: none;
+        @media (width > 768px) {
+            display: block;
+        }
+    }
+
+    .Menu-mobile,
+    .Menu-home {
+        display: block;
+        @media (width > 768px) {
+            display: none;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        flex-direction: row;
+    }
+
+    .Drawer-menu {
+        flex-direction: column;
+    }
+
+    a {
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+    }
+</style>

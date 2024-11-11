@@ -1,0 +1,191 @@
+---
+import { FEATURED, TOOLS } from "./data";
+---
+
+<section class="Section">
+    <div class="Container">
+        <h2>Projects</h2>
+
+        <div class="content">
+            <div>
+                <h3>Apps</h3>
+                <ul class="Projects-list">
+                    {
+                        FEATURED.map((project) => (
+                            <li>
+                                <article class="Project">
+                                    <h4>{project.title}</h4>
+                                    <p>{project.description}</p>
+                                    <footer class="Project-footer">
+                                        <div class="Project-tech-list">
+                                            {project.tech?.join(", ")}
+                                        </div>
+                                        <span
+                                            class="status"
+                                            data-status={project.status}
+                                        >
+                                            {project.status}
+                                        </span>
+                                        {/* <a href={project.url} target="_blank">
+                                            {project.url?.replace("https://", "")}
+                                        </a> */}
+                                    </footer>
+                                </article>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+            <div>
+                <h3>Tools</h3>
+                <ul class="Tools-list">
+                    {
+                        TOOLS.map((tool) => (
+                            <li>
+                                <article class="Tool">
+                                    <h4 class="Tool-title">{tool.title}</h4>:
+                                    <p class="Tool-description">
+                                        {tool.description}
+                                    </p>
+                                    <footer>
+                                        <a
+                                            class="Tool-link"
+                                            href={tool.url}
+                                            target="_blank"
+                                        >
+                                            {tool.url?.replace("https://", "")}
+                                        </a>
+                                    </footer>
+                                </article>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .status::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--background-color);
+        box-shadow: 0 0 1px 2px var(--box-shadow-color);
+    }
+
+    .status[data-status="Private beta"]::before {
+        --background-color: hsl(120, 40%, 40%);
+        --box-shadow-color: hsl(120 40% 40% / 0.2);
+    }
+
+    .status[data-status="Development"]::before {
+        --background-color: hsl(39, 85%, 65%);
+        --box-shadow-color: hsl(39 85% 65% / 0.2);
+    }
+
+    h3 {
+        margin: 3rem 0 2rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .Projects-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .Project {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: hsla(0, 0%, 100%, 0.05);
+        height: 100%;
+    }
+
+    .Project-footer {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        font-size: 0.75rem;
+        opacity: 0.8;
+    }
+
+    .Project h4 {
+        margin: 0;
+    }
+
+    .Project p {
+        margin: 0;
+    }
+
+    .Tools-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .Tool {
+        display: inline-block;
+        position: relative;
+    }
+
+    .Tool-title,
+    .Tool-description {
+        display: inline;
+        margin: 0;
+    }
+
+    .Tool-link {
+        font-size: 0.75rem;
+        opacity: 0.75;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+        }
+    }
+</style>
+
+<script>
+    import gsap from "gsap";
+    import ScrollTrigger from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".Projects-list li", {
+        opacity: 0,
+        y: 30,
+        stagger: 0.1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".Projects-list",
+            start: "top 90%",
+        },
+    });
+
+    gsap.from(".Tools-list li", {
+        opacity: 0,
+        x: 30,
+        stagger: 0.1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".Projects-list",
+            start: "top 90%",
+        },
+    });
+</script>

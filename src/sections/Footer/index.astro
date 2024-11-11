@@ -1,0 +1,34 @@
+---
+import sign from "./sign.svg";
+---
+
+<footer class="footer">
+    <div class="fcontent">
+        <img class="sign" src={sign.src} alt="Signed by Iván" title="Iván" />
+        <p>handcrafing the web</p>
+        <p>&copy; <abbr title="House Of Barcia">HOB</abbr></p>
+    </div>
+</footer>
+
+<style>
+    footer {
+        text-align: center;
+        padding-block: 12rem;
+        color: #3c3c3c;
+        font-size: 0.8rem;
+        margin-top: auto;
+    }
+
+    .sign {
+        margin-left: 2rem;
+    }
+
+    footer abbr {
+        text-decoration: none;
+        cursor: inherit;
+    }
+
+    footer img {
+        width: 100px;
+    }
+</style>

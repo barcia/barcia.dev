@@ -1,0 +1,53 @@
+---
+import { SPEAKING } from "./data";
+---
+
+<section class="Section">
+    <div class="Container">
+        <h2>Speaking</h2>
+        <ul class="Speaking-list">
+            {
+                SPEAKING.map((speaking) => (
+                    <li>
+                        <article class="Speaking-item">
+                            <time datetime={speaking.date.toISOString()}>
+                                {speaking.date.toLocaleDateString()}
+                            </time>
+                            <h3>{speaking.title}</h3>
+                            <div>{speaking.event}</div>
+                        </article>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</section>
+
+<style>
+    .Speaking-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .Speaking-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    h3 {
+        margin: 0;
+    }
+
+    time,
+    div {
+        opacity: 0.75;
+    }
+    time {
+        font-size: 0.8rem;
+    }
+</style>

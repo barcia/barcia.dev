@@ -1,35 +1,16 @@
 ---
-import { ClientRouter } from "astro:transitions";
-import "@fontsource/geist-mono";
-import "@barcia/corecss";
 import "@/assets/styles/global.css";
-import Navbar from "@/components/Navbar.astro";
-import Footer from "@/sections/Footer/index.astro";
+import "@fontsource/geist-mono";
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Iván Barcia | UI Engineer</title>
-        <meta
-            name="description"
-            content="Iván Barcia is a freelance UI Engineer based in Santiago de Compostela, Spain."
-        />
-        <ClientRouter />
-    </head>
-    <body>
-        <Navbar />
-        <slot />
-        <Footer />
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iván Barcia | UI Engineer</title>
+</head>
+<body class="antialiased max-w-screen-lg mx-auto min-h-dvh font-mono">
+    <slot />
+</body>
 </html>
-
-<style>
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-</style>

@@ -1,0 +1,47 @@
+---
+import Section from "@/components/Section.astro";
+
+const coding = [
+	"I am a mostly self-taught developer with a strong foundation in web technologies. I studied design at Instituto Tramontana.",
+	"I'm always eager to learn new things in tech and expand my knowledge.",
+	"After several years working in both product and agency environments, I transitioned to freelancing in the summer of 2024.",
+	"I enjoy developing personal projects and exploring creative solutions.",
+];
+
+const afk = [
+	"I'm passionate about photography, especially documentary photography. I spend a lot of time taking, reviewing, and studying photos.",
+	"I also love running through forests and mountains, and I sometimes participate in trail running competitions.",
+	"I have a strong interest in local heritage, especially petroglyphs.",
+];
+---
+
+<Section title="About">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+		<div class="flex flex-col gap-2">
+			<h3 class="text-lg font-bold">Coding guy</h3>
+			<ul class="list-disc ml-5 space-y-4">
+				{
+					coding.map((item) => (
+						<li>
+							<p>{item}</p>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+		<div>
+			<h3 class="text-lg font-bold">
+				<abbr title="Away From Keyboard">AFK</abbr>
+			</h3>
+			<ul class="list-disc ml-5 space-y-4">
+				{
+					afk.map((item) => (
+						<li>
+							<p>{item}</p>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</div>
+</Section>

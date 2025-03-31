@@ -1,30 +1,17 @@
 ---
 import { ROUTES } from "@/assets/contants";
-import Drawer from "@/components/Drawer.astro";
 
 const { pathname } = Astro.url;
 
 const MENU = [
 	{
-		label: "work",
+		label: "home",
 		url: ROUTES.home,
-	},
-	{
-		label: "about",
-		url: ROUTES.about,
 	},
 	{
 		label: "now",
 		url: ROUTES.now,
 	},
-	// {
-	//     label: "blog",
-	//     url: ROUTES.blog,
-	// },
-	// {
-	//     label: "newsletter",
-	//     url: ROUTES.newsletter,
-	// },
 ];
 ---
 
@@ -42,21 +29,6 @@ const MENU = [
 						))
 					}
 				</ul>
-			</div>
-			<div class="Menu-mobile">
-				<Drawer>
-					<ul class="Drawer-menu">
-						{
-							MENU.map((item) => (
-								<li>
-									<a data-astro-reload href={item.url}>
-										{item.label}
-									</a>
-								</li>
-							))
-						}
-					</ul>
-				</Drawer>
 			</div>
 		</div>
 	</div>

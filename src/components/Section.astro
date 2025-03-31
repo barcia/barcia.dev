@@ -1,0 +1,19 @@
+---
+type Props = {
+	title: string;
+};
+const { title }: Props = Astro.props;
+
+const handle = (text: string) => {
+	return text
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, "-")
+		.replace(/-$/, "")
+		.replace(/^-/, "");
+};
+---
+
+<section class="py-16" id={handle(title)}>
+	<h2 class="text-2xl font-bold">{title}</h2>
+	<slot />
+</section>

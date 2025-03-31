@@ -1,6 +1,7 @@
 ---
 import "@/assets/styles/global.css";
 import "@fontsource/ibm-plex-mono";
+import Navbar from "@/components/Navbar.astro";
 ---
 
 <!doctype html>
@@ -11,6 +12,7 @@ import "@fontsource/ibm-plex-mono";
 		<title>Iván Barcia | UI Engineer</title>
 	</head>
 	<body class="antialiased max-w-screen-lg mx-auto min-h-dvh font-mono">
+		<Navbar />
 		<slot />
 	</body>
 </html>

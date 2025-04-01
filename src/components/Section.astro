@@ -14,7 +14,7 @@ const handle = (text: string) => {
 };
 ---
 
-<section id={id ?? handle(title ?? "")}>
+<section id={id ?? handle(title ?? "")} class="scroll-mt-16">
 	{title && <h2 class="font-bold mb-3">{title}</h2>}
 	<slot />
 </section>

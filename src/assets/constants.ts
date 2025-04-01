@@ -2,6 +2,11 @@ type Route = {
 	[key: string]: string;
 };
 
+export const PERSONAL_WEB = {
+	name: "ivan.gal",
+	url: "https://ivan.gal",
+};
+
 export const ROUTES: Route = {
 	home: "/",
 	now: "/now",

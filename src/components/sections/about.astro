@@ -1,14 +1,17 @@
 ---
 import Section from "@/components/Section.astro";
+import { SOCIAL, PERSONAL_WEB } from "@/assets/constants";
 
 const CONTENT = [
 	{
 		title: "Coding guy",
 		items: [
-			"I am a mostly self-taught developer with a strong foundation in web technologies. I studied design at Instituto Tramontana.",
-			"I'm always eager to learn new things in tech and expand my knowledge.",
+			"I am a mostly self-taught developer with a strong foundation in web technologies.",
+			"I can collaborate in the whole process of building a digital product.",
+			"I studied design at Instituto Tramontana.",
 			"After several years working in both product and agency environments, I transitioned to freelancing in the summer of 2024.",
-			"I enjoy developing personal projects and exploring creative solutions.",
+			"I'm always eager to learn new things in tech and expand my knowledge.",
+			`I enjoy developing personal projects and exploring creative solutions. You can find things in my <a href='${SOCIAL.github.url}' target='_blank'>${SOCIAL.github.name}</a> page.`,
 		],
 	},
 	{
@@ -16,8 +19,10 @@ const CONTENT = [
 		abbr: "AFK",
 		items: [
 			"I'm passionate about photography, especially documentary photography. I spend a lot of time taking, reviewing, and studying photos.",
-			"I also love running through forests and mountains, and I sometimes participate in trail running competitions.",
-			"I have a strong interest in local heritage, especially petroglyphs.",
+			"I also love running through forests and mountains, and I sometimes participate in Trail Running competitions.",
+			"I have a strong interest in local heritage, especially petroglyphs, folklore, and traditional music. Sometimes I handcraft straw hats and wicker baskets.",
+			"I love maps and I am learning about field recording.",
+			`You can find some personal things in my personal website, <a href='${PERSONAL_WEB.url}' target='_blank'>${PERSONAL_WEB.name}</a>.`,
 		],
 	},
 ];
@@ -33,7 +38,7 @@ const CONTENT = [
 					</h3>
 					<div class="space-y-5 leading-relaxed">
 						{block.items.map((item) => (
-							<p>{item}</p>
+							<p set:html={item} />
 						))}
 					</div>
 				</div>

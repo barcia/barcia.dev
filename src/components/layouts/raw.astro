@@ -4,9 +4,14 @@ import Layout from "@/components/layouts/main.astro";
 const { frontmatter, rawContent } = Astro.props;
 ---
 
-<Layout>
-	<div>
-		<h1>{frontmatter.title}</h1>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Iván Barcia | UI Engineer • LLMs</title>
+	</head>
+	<body>
 		<pre class="whitespace-pre-wrap font-mono">{rawContent()}</pre>
-	</div>
-</Layout>
+	</body>
+</html>

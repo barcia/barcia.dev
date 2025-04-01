@@ -1,0 +1,12 @@
+---
+import Layout from "@/components/layouts/main.astro";
+
+const { frontmatter, rawContent } = Astro.props;
+---
+
+<Layout>
+	<div>
+		<h1>{frontmatter.title}</h1>
+		<pre class="whitespace-pre-wrap font-mono">{rawContent()}</pre>
+	</div>
+</Layout>

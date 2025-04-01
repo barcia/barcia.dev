@@ -24,6 +24,7 @@
 		"prettier-plugin-astro": "^0.14.1"
 	},
 	"prettier": {
+		"printWidth": 120,
 		"plugins": [
 			"prettier-plugin-astro"
 		],

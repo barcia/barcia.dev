@@ -1,0 +1,10 @@
+---
+import Section from "@/components/Section.astro";
+import { COMPANIES } from "@/assets/constants";
+---
+
+<Section title="Companies I've worked with" id="companies">
+	<ul class="flex flex-wrap gap-x-6 gap-y-4 justify-center md:justify-start">
+		{COMPANIES.map((company) => <li>{company.name}</li>)}
+	</ul>
+</Section>

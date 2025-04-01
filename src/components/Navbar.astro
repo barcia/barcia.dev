@@ -1,5 +1,5 @@
 ---
-import { ROUTES } from "@/assets/contants";
+import { ROUTES } from "@/assets/constants";
 
 const { pathname } = Astro.url;
 
@@ -7,72 +7,26 @@ const MENU = [
 	{
 		label: "home",
 		url: ROUTES.home,
+		active: pathname === ROUTES.home,
 	},
 	{
 		label: "now",
 		url: ROUTES.now,
+		active: pathname.includes(ROUTES.now),
 	},
 ];
 ---
 
-<nav>
-	<div class="Container">
-		<div class="Menu">
-			<a class="Menu-home" href={ROUTES.home}>home</a>
-			<div class="Menu-desktop">
-				<ul>
-					{
-						MENU.map((item) => (
-							<li>
-								<a href={item.url}>{item.label}</a>
-							</li>
-						))
-					}
-				</ul>
-			</div>
-		</div>
-	</div>
+<nav class="py-6 mb-6 md:mb-16">
+	<ul class="flex gap-8 justify-end">
+		{
+			MENU.map((item) => (
+				<li>
+					<a class:list={["no-underline", { "font-bold": item.active }]} href={item.url}>
+						{item.label}
+					</a>
+				</li>
+			))
+		}
+	</ul>
 </nav>
-
-<style>
-	.Menu {
-		padding: var(--size-7) 0;
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.Menu-desktop {
-		margin-left: auto;
-		display: none;
-		@media (width > 768px) {
-			display: block;
-		}
-	}
-
-	.Menu-mobile,
-	.Menu-home {
-		display: block;
-		@media (width > 768px) {
-			display: none;
-		}
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		display: flex;
-		gap: 2rem;
-		flex-direction: row;
-	}
-
-	.Drawer-menu {
-		flex-direction: column;
-	}
-
-	a {
-		display: inline-block;
-		color: inherit;
-		text-decoration: none;
-	}
-</style>

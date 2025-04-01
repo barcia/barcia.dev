@@ -1,8 +1,9 @@
 ---
 type Props = {
-	title: string;
+	title?: string;
+	id?: string;
 };
-const { title }: Props = Astro.props;
+const { title, id }: Props = Astro.props;
 
 const handle = (text: string) => {
 	return text
@@ -13,7 +14,7 @@ const handle = (text: string) => {
 };
 ---
 
-<section class="py-16" id={handle(title)}>
-	<h2 class="text-2xl font-bold">{title}</h2>
+<section id={id ?? handle(title ?? "")}>
+	{title && <h2 class="font-bold mb-3">{title}</h2>}
 	<slot />
 </section>

@@ -1,11 +1,12 @@
 ---
 import Layout from "@/components/layouts/main.astro";
-import { About, Contact, Companies, Work } from "./homepage";
+import { Hero, About, Contact, Companies, Work } from "@/components/sections";
 ---
 
 <Layout title="Iván Barcia. UI Engineer.">
+	<Hero />
 	<Work />
-	<About />
-	<Contact />
 	<Companies />
+	<Contact />
+	<About />
 </Layout>

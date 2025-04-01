@@ -1,0 +1,44 @@
+---
+import { ROUTES } from "@/assets/constants";
+
+const { pathname } = Astro.url;
+
+const FOOTER_MENU = [
+	{
+		label: "Contact",
+		url: `${ROUTES.home}#contact`,
+	},
+	{
+		label: "Uses",
+		url: ROUTES.uses,
+		active: pathname.includes(ROUTES.uses),
+	},
+	{
+		label: "LLMs.txt",
+		url: ROUTES.llmstxt,
+		active: pathname.includes(ROUTES.llmstxt),
+		target: "_blank",
+	},
+];
+---
+
+<footer class="py-8 mt-16 md:mt-32 text-xs">
+	<div class="flex justify-between flex-col-reverse gap-3 md:flex-row">
+		<div class="">© 2025 HOB • handcrafting the web</div>
+		<ul class="flex gap-8">
+			{
+				FOOTER_MENU.map((item) => (
+					<li>
+						<a
+							href={item.url}
+							class:list={["no-underline", { "font-bold": item.active }]}
+							target={item.target}
+						>
+							{item.label}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+</footer>

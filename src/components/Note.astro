@@ -1,0 +1,49 @@
+---
+import Bluesky from "@/assets/images/Bluesky_Logo.svg";
+type Props = {
+	id: string;
+	date: Date;
+	Content: any;
+	isPage?: boolean;
+};
+const { id, date, Content, isPage = false } = Astro.props;
+
+const Container = isPage ? "div" : "article";
+const Link = isPage ? "span" : "a";
+
+const url = encodeURIComponent(`@barcia.dev, about https://barcia.dev/notes/${id} <br>`);
+---
+
+<Container class:list={["flex flex-col prose", isPage ? "prose-md" : "prose-sm"]}>
+	<div transition:name=`content-${id}`>
+		<Content />
+		{
+			isPage && (
+				<a
+					href={`https://bsky.app/intent/compose?text=${url}`}
+					target="_blank"
+					class="inline-flex items-center hover:bg-slate-100 rounded p-1"
+					aria-label="Reply on Bluesky"
+					title="Reply on Bluesky"
+				>
+					<Bluesky size={14} />
+				</a>
+			)
+		}
+	</div>
+	<footer class="order-first text-xs text-slate-400 prose-a:text-slate-400" transition:name=`footer-${id}`>
+		<time datetime={date.toISOString()} class="leading-5 align-bottom">
+			<Link href={`/notes/${id}`}
+				>{
+					date.toLocaleString("en-US", {
+						year: "numeric",
+						month: "short",
+						day: "numeric",
+						hour: "2-digit",
+						minute: "2-digit",
+					})
+				}</Link
+			>
+		</time>
+	</footer>
+</Container>

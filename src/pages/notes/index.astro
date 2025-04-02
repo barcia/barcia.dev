@@ -1,0 +1,33 @@
+---
+import Layout from "@/components/layouts/page.astro";
+import { getCollection, render } from "astro:content";
+import { Note } from "@/components";
+// Get all entries from a collection.
+// Requires the name of the collection as an argument.
+const allNotes = await getCollection("notes");
+
+const sortedNotes = allNotes.sort((a, b) => b.data.createdDate.getTime() - a.data.createdDate.getTime());
+
+const renderedNotes = await Promise.all(
+	sortedNotes.map(async (note) => {
+		const renderedNote = await render(note);
+		return {
+			id: note.id,
+			date: note.data.createdDate,
+			render: renderedNote,
+		};
+	}),
+);
+---
+
+<Layout title="Notes">
+	<ul class="grid gap-4">
+		{
+			renderedNotes.map((note) => (
+				<li>
+					<Note id={note.id} date={note.date} Content={note.render.Content} />
+				</li>
+			))
+		}
+	</ul>
+</Layout>

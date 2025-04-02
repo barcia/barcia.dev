@@ -1,0 +1,22 @@
+---
+import Layout from "@/components/layouts/page.astro";
+import { getCollection, render } from "astro:content";
+import { Note } from "@/components";
+
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+	const notes = await getCollection("notes");
+	return notes.map((note) => ({
+		params: { id: note.id },
+		props: { note },
+	}));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { note } = Astro.props;
+console.log(note);
+const { Content } = await render(note);
+---
+
+<Layout title={`Note: ${note.id}`}>
+	<Note id={note.id} date={note.data.createdDate} Content={Content} isPage={true} />
+</Layout>

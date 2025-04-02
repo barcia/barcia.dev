@@ -13,6 +13,8 @@ export const ROUTES: Route = {
 	about: "/about",
 	blog: "/blog",
 	newsletter: "/newsletter",
+	notes: "/notes",
+	note: "/notes/:id",
 	uses: "/uses",
 	llmstxt: "/llms.txt",
 };

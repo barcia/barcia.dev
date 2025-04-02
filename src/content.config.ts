@@ -1,12 +1,11 @@
 import { defineCollection, z } from "astro:content";
 import { glob, file } from "astro/loaders";
 
-const pages = defineCollection({
-	loader: glob({ pattern: "**/*.astro", base: "src/pages" }),
+const notes = defineCollection({
+	loader: glob({ pattern: "**/*.md", base: "content/notes" }),
 	schema: z.object({
-		title: z.string(),
-		updatedDate: z.date(),
+		createdDate: z.date().transform((str) => new Date(str)),
 	}),
 });
 
-export const collections = { pages };
+export const collections = { notes };

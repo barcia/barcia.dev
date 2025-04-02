@@ -1,5 +1,3 @@
-import type { CollectionEntry } from "astro:content";
-
 type FilterCollectionOptions = {
 	drafts?: boolean;
 	future?: boolean;

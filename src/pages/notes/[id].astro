@@ -13,10 +13,9 @@ export async function getStaticPaths() {
 }
 // 2. For your template, you can get the entry directly from the prop
 const { note } = Astro.props;
-console.log(note);
 const { Content } = await render(note);
 ---
 
 <Layout title={`Note: ${note.id}`}>
-	<Note id={note.id} date={note.data.createdDate} Content={Content} isPage={true} />
+	<Note id={note.id} date={note.data.datePub} Content={Content} isPage={true} />
 </Layout>

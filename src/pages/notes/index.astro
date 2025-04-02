@@ -2,18 +2,17 @@
 import Layout from "@/components/layouts/page.astro";
 import { getCollection, render } from "astro:content";
 import { Note } from "@/components";
-// Get all entries from a collection.
-// Requires the name of the collection as an argument.
-const allNotes = await getCollection("notes");
+import { filterCollection } from "@/utils/collections";
 
-const sortedNotes = allNotes.sort((a, b) => b.data.createdDate.getTime() - a.data.createdDate.getTime());
+const allNotes = await getCollection("notes");
+const filteredNotes = filterCollection(allNotes);
 
 const renderedNotes = await Promise.all(
-	sortedNotes.map(async (note) => {
+	filteredNotes.map(async (note) => {
 		const renderedNote = await render(note);
 		return {
 			id: note.id,
-			date: note.data.createdDate,
+			date: note.data.datePub,
 			render: renderedNote,
 		};
 	}),

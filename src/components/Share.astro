@@ -1,0 +1,27 @@
+---
+import Bluesky from "@/assets/images/Bluesky_Logo.svg";
+
+type Props = {
+	url: string;
+};
+
+const { url: itemUrl } = Astro.props;
+
+const URL = {
+	bsky: {
+		compose: `https://bsky.app/intent/compose?text=${encodeURIComponent(`@barcia.dev, about ${itemUrl} <br>`)}`,
+	},
+};
+---
+
+<div class="flex gap-2">
+	<a
+		href={URL.bsky.compose}
+		target="_blank"
+		class="inline-flex items-center hover:bg-slate-100 rounded p-1"
+		aria-label="Reply on Bluesky"
+		title="Reply on Bluesky"
+	>
+		<Bluesky size={14} />
+	</a>
+</div>

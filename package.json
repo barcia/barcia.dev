@@ -11,9 +11,10 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
+		"@astrojs/check": "^0.9.4",
 		"@fontsource/ibm-plex-mono": "^5.2.5",
 		"astro": "^5.5",
-		"typescript": "^5.8"
+		"typescript": "^5.8.2"
 	},
 	"devDependencies": {
 		"@astrojs/rss": "^4.0.11",
@@ -21,6 +22,8 @@
 		"@tailwindcss/vite": "^4.0",
 		"prettier": "^3.5.3",
 		"prettier-plugin-astro": "^0.14.1",
+		"rehype-sanitize": "^6.0.0",
+		"sanitize-html": "^2.15.0",
 		"tailwindcss": "^4.0"
 	},
 	"prettier": {

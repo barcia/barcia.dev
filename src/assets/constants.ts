@@ -56,7 +56,7 @@ type Company = {
 
 export const COMPANIES: Company[] = [
 	{
-		name: "F.C. Barcelona",
+		name: "FC Barcelona",
 		iconDark: "/assets/images/F.C._Barcelona_Logo.svg",
 		iconLight: "/assets/images/F.C._Barcelona_Logo_Light.svg",
 	},
@@ -66,19 +66,19 @@ export const COMPANIES: Company[] = [
 		iconLight: "/assets/images/Github_Logo_Light.svg",
 	},
 	{
+		name: "Tifin",
+		iconDark: "/assets/images/Tifin_Logo.svg",
+		iconLight: "/assets/images/Tifin_Logo_Light.svg",
+	},
+	{
 		name: "Meliã",
 		iconDark: "/assets/images/Melia_Logo.svg",
 		iconLight: "/assets/images/Melia_Logo_Light.svg",
 	},
 	{
-		name: "Levante U.D.",
+		name: "Levante UD",
 		iconDark: "/assets/images/Levante_UD_Logo.svg",
 		iconLight: "/assets/images/Levante_UD_Logo_Light.svg",
-	},
-	{
-		name: "Tifin",
-		iconDark: "/assets/images/Tifin_Logo.svg",
-		iconLight: "/assets/images/Tifin_Logo_Light.svg",
 	},
 	{
 		name: "AiKit",

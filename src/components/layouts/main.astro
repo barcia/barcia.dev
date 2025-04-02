@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import "@/assets/styles/global.css";
 import "@fontsource/ibm-plex-mono";
 import { Navbar, Footer } from "@/components";
@@ -14,6 +15,7 @@ import { Navbar, Footer } from "@/components";
 			name="description"
 			content="Iván Barcia is a freelance UI Engineer based in Santiago de Compostela, Spain."
 		/>
+		<ClientRouter />
 	</head>
 	<body
 		class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 antialiased max-w-screen-md box-content mx-auto min-h-dvh font-mono px-4 md:px-8 flex flex-col cursor-default"

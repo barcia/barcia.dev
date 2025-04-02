@@ -17,7 +17,7 @@ export async function GET(context: any) {
 
 	return rss({
 		title: "Iván Barcia | Notes",
-		description: "Dev and tech notes by Iván Barcia",
+		description: "Developer and design notes by Iván Barcia",
 		site: context.site,
 		items,
 		customData: `<language>en</language>`,

@@ -1,14 +1,13 @@
 ---
 layout: "@/components/layouts/page.astro"
 title: "Now"
-updatedDate: 2025-04-01
 ---
 
-Updated at april 2025
+Last updated: April 2025
 
-- I work fully remotely near Santiago de Compostela, Spain, though I also travel frequently to Madrid.
-- I’m a freelance UI Engineer, collaborating with a select group of clients.
-- Recently, I’ve been focusing on AI-related projects as well as fintech and wealth management, spending most of my time collaborating with [Tifin](https://www.linkedin.com/company/tifin/).
-- In my limited free time, I work on developing some digital products ideas.
+- Based near Santiago de Compostela, Spain, I work remotely and frequently travel to Madrid.
+- I'm a freelance UI Engineer, collaborating with a select group of clients.
+- Recently, my focus has been on AI, fintech, and wealth management projects, primarily collaborating with [Tifin](https://www.linkedin.com/company/tifin/).
+- In my spare time, I work on developing digital product concepts.
 
-You can see which artifacts I'm currently using in the [uses](/uses) page.
+You can see the tools and gear I use daily on my [uses](/uses) page.

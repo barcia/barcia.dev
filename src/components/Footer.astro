@@ -5,20 +5,20 @@ const { pathname } = Astro.url;
 
 const FOOTER_MENU = [
 	{
-		label: "Contact",
-		url: `${ROUTES.home}#contact`,
+		label: "#contact",
+		url: `${ROUTES.home}#get-in-touch`,
 	},
 	{
-		label: "Uses",
+		label: "/uses",
 		url: ROUTES.uses,
 		active: pathname.includes(ROUTES.uses),
 	},
-	{
-		label: "LLMs.txt",
-		url: ROUTES.llmstxt,
-		active: pathname.includes(ROUTES.llmstxt),
-		target: "_blank",
-	},
+	// {
+	// 	label: "LLMs.txt",
+	// 	url: ROUTES.llmstxt,
+	// 	active: pathname.includes(ROUTES.llmstxt),
+	// 	target: "_blank",
+	// },
 ];
 ---
 
@@ -29,11 +29,7 @@ const FOOTER_MENU = [
 			{
 				FOOTER_MENU.map((item) => (
 					<li>
-						<a
-							href={item.url}
-							class:list={["no-underline", { "font-bold": item.active }]}
-							target={item.target}
-						>
+						<a href={item.url} class:list={["no-underline", { "font-bold": item.active }]}>
 							{item.label}
 						</a>
 					</li>

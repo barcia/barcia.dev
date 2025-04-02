@@ -5,12 +5,17 @@ const { pathname } = Astro.url;
 
 const MENU = [
 	{
-		label: "home",
+		label: "/work",
 		url: ROUTES.home,
 		active: pathname === ROUTES.home,
 	},
 	{
-		label: "now",
+		label: "/about",
+		url: ROUTES.about,
+		active: pathname.includes(ROUTES.about),
+	},
+	{
+		label: "/now",
 		url: ROUTES.now,
 		active: pathname.includes(ROUTES.now),
 	},

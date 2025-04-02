@@ -4,13 +4,3 @@
 @theme {
 	--font-mono: "IBM Plex Mono", monospace;
 }
-
-@layer base {
-	a {
-		@apply underline;
-	}
-
-	abbr {
-		@apply cursor-help;
-	}
-}

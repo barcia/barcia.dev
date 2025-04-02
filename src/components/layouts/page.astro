@@ -5,7 +5,9 @@ const { title } = Astro.props.frontmatter || Astro.props;
 ---
 
 <Layout>
-	<div class="prose dark:prose-invert">
+	<div
+		class="prose dark:prose-invert prose-headings:text-base prose-headings:target:bg-amber-100 dark:prose-headings:target:bg-amber-950"
+	>
 		<h1>{title}</h1>
 		<slot />
 	</div>

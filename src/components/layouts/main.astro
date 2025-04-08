@@ -25,7 +25,7 @@ const { class: className } = Astro.props;
 		class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 antialiased max-w-screen-md box-content mx-auto min-h-dvh font-mono px-4 md:px-8 flex flex-col cursor-default"
 	>
 		<Navbar />
-		<main class:list={["flex-1", className]}>
+		<main class:list={["flex-1 self-center", className]}>
 			<slot />
 		</main>
 		<Footer />

@@ -1,25 +1,9 @@
 ---
-import { ROUTES } from "@/assets/constants";
+import { NAV_FOOTER } from "@/site.config";
 
 const { pathname } = Astro.url;
 
-const FOOTER_MENU = [
-	{
-		label: "#contact",
-		url: `${ROUTES.home}#get-in-touch`,
-	},
-	{
-		label: "/uses",
-		url: ROUTES.uses,
-		active: pathname.includes(ROUTES.uses),
-	},
-	// {
-	// 	label: "LLMs.txt",
-	// 	url: ROUTES.llmstxt,
-	// 	active: pathname.includes(ROUTES.llmstxt),
-	// 	target: "_blank",
-	// },
-];
+const isActive = (url: string) => pathname.split("/")[1] === url.split("/")[1];
 ---
 
 <footer class="py-8 mt-16 md:mt-32 text-xs">
@@ -27,9 +11,9 @@ const FOOTER_MENU = [
 		<div class="">© 2025 HOB • handcrafting the web</div>
 		<ul class="flex gap-8">
 			{
-				FOOTER_MENU.map((item) => (
+				NAV_FOOTER.map((item) => (
 					<li>
-						<a href={item.url} class:list={["no-underline", { "font-bold": item.active }]}>
+						<a href={item.url} class:list={["no-underline", { "font-bold": isActive(item.url) }]}>
 							{item.label}
 						</a>
 					</li>

@@ -1,4 +1,4 @@
-type FilterCollectionOptions = {
+export type FilterCollectionOptions = {
 	drafts?: boolean;
 	future?: boolean;
 	sortByDate?: boolean;

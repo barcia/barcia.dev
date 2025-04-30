@@ -1,6 +1,5 @@
 ---
-import { ROUTES } from "@/assets/constants";
-import { absoluteUrl } from "@/utils";
+import { absoluteRoute, route } from "@/utils/routes";
 import { Share } from "@/components";
 type Props = {
 	id: string;
@@ -9,6 +8,8 @@ type Props = {
 	isPage?: boolean;
 };
 const { id, date, Content, isPage = false } = Astro.props;
+
+const url = route("note", [{ key: ":id", value: id }]);
 
 const Container = isPage ? "div" : "article";
 const Link = isPage ? "span" : "a";
@@ -20,8 +21,8 @@ const Link = isPage ? "span" : "a";
 		transition:name=`footer-${id}`
 	>
 		<time datetime={date.toISOString()}>
-			<Link href={`${ROUTES.note.replace(":id", id)}`}
-				>{
+			<Link href={url}>
+				{
 					date.toLocaleString("en-US", {
 						year: "numeric",
 						month: "short",
@@ -35,6 +36,6 @@ const Link = isPage ? "span" : "a";
 	</footer>
 	<div transition:name=`content-${id}`>
 		<Content />
-		{isPage && <Share url={absoluteUrl(`${ROUTES.note.replace(":id", id)}`)} />}
+		{isPage && <Share url={absoluteRoute(url)} />}
 	</div>
 </Container>

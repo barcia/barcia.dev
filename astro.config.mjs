@@ -10,4 +10,12 @@ export default defineConfig({
 	experimental: {
 		svg: true,
 	},
+	markdown: {
+		shikiConfig: {
+			themes: {
+				light: "github-dark-dimmed",
+				dark: "github-dark",
+			},
+		},
+	},
 });

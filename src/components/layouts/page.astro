@@ -1,12 +1,27 @@
 ---
 import Layout from "@/components/layouts/main.astro";
 
-const { title } = Astro.props.frontmatter || Astro.props;
+const { title, date } = Astro.props.frontmatter || Astro.props;
 ---
 
-<Layout
-	class="prose dark:prose-invert prose-headings:text-base prose-headings:target:bg-amber-100 dark:prose-headings:target:bg-amber-950"
->
-	<h1>{title}</h1>
-	<slot />
+<Layout>
+	<h1 class="font-bold mb-4"><span transition:name={`title-${title}`}>{title}</span></h1>
+	{
+		date && (
+			<div class="text-sm text-gray-400 mb-4">
+				<time class="dark:text-gray-600" datetime={date}>
+					{date.toLocaleString("en-US", {
+						year: "numeric",
+						month: "long",
+						day: "2-digit",
+					})}
+				</time>
+			</div>
+		)
+	}
+	<div
+		class="prose dark:prose-invert prose-headings:text-base prose-headings:target:bg-amber-100 dark:prose-headings:target:bg-amber-950"
+	>
+		<slot />
+	</div>
 </Layout>

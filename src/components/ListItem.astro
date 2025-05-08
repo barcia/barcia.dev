@@ -1,0 +1,28 @@
+---
+import { route } from "@/utils/routes";
+
+type Props = {
+	slug: string;
+	date: Date;
+	title: any;
+};
+const { slug, date, title } = Astro.props;
+const url = route("note", [{ key: ":id", value: slug }]);
+---
+
+<article class="flex gap-6 relative">
+	<time datetime={date.toISOString()} class="text-sm text-gray-500 shrink-0 mt-0.5">
+		{
+			date.toLocaleString("en-US", {
+				year: "numeric",
+				month: "short",
+				day: "2-digit",
+			})
+		}
+	</time>
+	<h2>
+		<a href={url} class="hover:underline after:absolute after:inset-0"
+			><span transition:name={`title-${title}`}>{title}</span></a
+		>
+	</h2>
+</article>

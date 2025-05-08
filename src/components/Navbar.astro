@@ -1,38 +1,16 @@
 ---
-import { ROUTES } from "@/assets/constants";
+import { NAV_MAIN } from "@/site.config";
 
 const { pathname } = Astro.url;
-
-const MENU = [
-	{
-		label: "work",
-		url: ROUTES.home,
-		active: pathname === ROUTES.home,
-	},
-	{
-		label: "about",
-		url: ROUTES.about,
-		active: pathname.includes(ROUTES.about),
-	},
-	{
-		label: "notes",
-		url: ROUTES.notes,
-		active: pathname.includes(ROUTES.notes),
-	},
-	{
-		label: "now",
-		url: ROUTES.now,
-		active: pathname.includes(ROUTES.now),
-	},
-];
+const isActive = (url: string) => pathname.split("/")[1] === url.split("/")[1];
 ---
 
 <nav class="py-6 mb-6 md:mb-16">
 	<ul class="flex gap-8 justify-end">
 		{
-			MENU.map((item) => (
+			NAV_MAIN.map((item) => (
 				<li>
-					<a class:list={["no-underline", { "font-bold": item.active }]} href={item.url}>
+					<a class:list={["no-underline", { "font-bold": isActive(item.url) }]} href={item.url}>
 						{item.label}
 					</a>
 				</li>

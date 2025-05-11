@@ -19,10 +19,10 @@ export const NAV_MAIN = [
 		label: "about",
 		url: route("about"),
 	},
-	{
-		label: "notes",
-		url: route("notes"),
-	},
+	// {
+	// 	label: "notes",
+	// 	url: route("notes"),
+	// },
 	{
 		label: "now",
 		url: route("now"),

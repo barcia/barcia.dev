@@ -4,8 +4,6 @@ title: "Uses"
 updatedDate: 2025-04-01
 ---
 
-Updated at april 2025
-
 Is not all, but relevant or I'm loving it
 
 ## Hardware

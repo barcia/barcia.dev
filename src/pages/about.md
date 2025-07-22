@@ -16,6 +16,6 @@ title: "About"
 
 - I'm passionate about photography, especially documentary photography. I spend a lot of time taking, reviewing, and studying photos.
 - I also love running through forests and mountains, and sometimes participate in trail running competitions.
-- I have a strong interest in local heritage, especially petroglyphs, folklore, and traditional music. Sometimes I handcraft straw hats and wicker baskets.
+- I have a strong interest in local heritage, especially petroglyphs and folklore. Sometimes I handcraft straw hats and wicker baskets.
 - I love maps and am exploring field recording.
 - You can find more about my personal interests on my website, [ivan.gal](https://ivan.gal).

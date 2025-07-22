@@ -1,7 +1,7 @@
 ---
 layout: "@/components/layouts/page.astro"
 title: "Uses"
-updatedDate: 2025-04-01
+updatedDate: 2025-07-22
 ---
 
 Is not all, but relevant or I'm loving it

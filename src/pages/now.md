@@ -1,13 +1,14 @@
 ---
 layout: "@/components/layouts/page.astro"
 title: "Now"
+updatedDate: 2025-07-22
 ---
 
-Last updated: May 2025
+Last updated: July 2025
 
-- Based near **Santiago de Compostela**, Spain, I work remotely and frequently travel to Madrid.
-- I'm a **freelance** UI Engineer, collaborating with a select group of clients.
-- Recently, my focus has been on AI, fintech, and wealth management projects, primarily collaborating with [**Tifin**](https://www.linkedin.com/company/tifin/).
+- Right now I’m working full-time as a Senior Frontend Developer at [AiKit](https://www.linkedin.com/company/aikit-es), a Spanish AI-native company developing products that are set to revolutionize the business sector in the coming months.
+- I’m also a **freelance** UI Engineer, collaborating on small but impactful projects with a select group of clients.
 - In my spare time, I work on developing some **personal projects**.
+- Based near **Santiago de Compostela**, Spain, I work remotely and frequently travel to Madrid.
 
 You can see the tools and gear I use daily on my [uses](/uses) page.

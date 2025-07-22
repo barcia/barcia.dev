@@ -7,9 +7,6 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
-	experimental: {
-		svg: true,
-	},
 	markdown: {
 		shikiConfig: {
 			themes: {

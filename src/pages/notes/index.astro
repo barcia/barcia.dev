@@ -1,8 +1,0 @@
----
-import Layout from "@/components/layouts/collection.astro";
-import { getNotes } from "@/utils/collections/notes";
-
-const { notes, tags } = await getNotes();
----
-
-<Layout title="Notes" collection={notes} tags={tags} />

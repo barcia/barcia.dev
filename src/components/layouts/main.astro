@@ -3,7 +3,7 @@ import { ClientRouter } from "astro:transitions";
 import "@/assets/styles/global.css";
 import "@fontsource/ibm-plex-mono/400.css";
 import "@fontsource/ibm-plex-mono/700.css";
-import { Footer, Navbar } from "@/components";
+import { Footer, Navbar } from "@/components/sections";
 
 const { class: className } = Astro.props;
 ---
@@ -16,7 +16,7 @@ const { class: className } = Astro.props;
 		<title>Iván Barcia | UI Engineer</title>
 		<meta
 			name="description"
-			content="Iván Barcia is a freelance UI Engineer based in Santiago de Compostela, Spain."
+			content="Iván Barcia is a UI Engineer and Frontend Developer based in Santiago de Compostela, Spain."
 		/>
 		<meta name="format-detection" content="telephone=no" />
 		<ClientRouter />
@@ -25,7 +25,7 @@ const { class: className } = Astro.props;
 		class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 antialiased max-w-3xl box-content mx-auto min-h-dvh font-mono px-4 md:px-8 flex flex-col cursor-default"
 	>
 		<Navbar />
-		<main class:list={["flex-1", className]}>
+		<main class:list={["flex-1 w-full mx-auto", className]}>
 			<slot />
 		</main>
 		<Footer />

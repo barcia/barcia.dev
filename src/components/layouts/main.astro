@@ -3,7 +3,7 @@ import { ClientRouter } from "astro:transitions";
 import "@/assets/styles/global.css";
 import "@fontsource/ibm-plex-mono/400.css";
 import "@fontsource/ibm-plex-mono/700.css";
-import { Navbar, Footer } from "@/components";
+import { Footer, Navbar } from "@/components";
 
 const { class: className } = Astro.props;
 ---
@@ -22,7 +22,7 @@ const { class: className } = Astro.props;
 		<ClientRouter />
 	</head>
 	<body
-		class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 antialiased max-w-screen-md box-content mx-auto min-h-dvh font-mono px-4 md:px-8 flex flex-col cursor-default"
+		class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 antialiased max-w-3xl box-content mx-auto min-h-dvh font-mono px-4 md:px-8 flex flex-col cursor-default"
 	>
 		<Navbar />
 		<main class:list={["flex-1", className]}>

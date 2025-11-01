@@ -14,7 +14,7 @@
 		"format": "prettier --write .",
 		"lint:astro": "astro check",
 		"lint:biome": "biome check",
-		"lint": "astro check && biome check"
+		"lint": "astro check && biome check --write"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.5",

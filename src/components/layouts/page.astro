@@ -3,10 +3,13 @@ import Layout from "@/components/layouts/main.astro";
 
 const { title, updatedDate } = Astro.props.frontmatter || Astro.props;
 
-const updatedDateFormatted = updatedDate ? new Date(updatedDate).toLocaleDateString("en-US", {
-	year: "numeric",
-	month: "long",
-}) : null;
+const updatedDateFormatted = updatedDate
+	? new Date(updatedDate).toLocaleDateString("en-US", {
+			year: "numeric",
+			month: "long",
+			day: "2-digit",
+		})
+	: null;
 ---
 
 <Layout class="prose dark:prose-invert prose-headings:prose-base prose-headings:target:bg-amber-100 dark:prose-headings:target:bg-amber-950">

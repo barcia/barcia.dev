@@ -22,4 +22,5 @@ FC Barcelona, GitHub, Tifin, Meliã, Levante UD, AiKit, RedRadix, Grow, OpositaT
 - [LinkedIn](https://www.linkedin.com/in/ivanbarcia/)
 - [Github](https://github.com/barcia)
 - [Figma](https://www.figma.com/@barcia)
+- [Twitter](https://x.com/ivarcia)
 - [Bluesky](https://bsky.app/profile/barcia.dev)

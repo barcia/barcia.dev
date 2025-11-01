@@ -32,7 +32,7 @@ Is not all, but relevant or I'm loving it
 - [Sketch](https://www.sketch.com/)
 - [Spotify](https://spotify.com/)
 - [1Password](https://1password.com/)
-- [Affinity Designer](https://affinity.serif.com/designer/)
+- [Affinity Studio](https://www.affinity.studio/)
 
 ## Tools
 
@@ -44,8 +44,6 @@ Is not all, but relevant or I'm loving it
 - [React](https://react.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Vercel](https://vercel.com/)
-- [Vercel AI SDK](https://sdk.vercel.ai/)
 
 ## Gear
 

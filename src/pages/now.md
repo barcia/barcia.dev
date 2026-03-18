@@ -1,7 +1,7 @@
 ---
 layout: "@/components/layouts/page.astro"
 title: "Now"
-updatedDate: 2025-11-01
+updatedDate: 2026-03-18
 ---
 
 - Right now I’m working full-time as a Senior Frontend Developer at [AiKit](https://www.linkedin.com/company/aikit-es), a Spanish AI-native company developing products that are set to revolutionize the business sector in the coming months.

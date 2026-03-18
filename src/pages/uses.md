@@ -1,7 +1,7 @@
 ---
 layout: "@/components/layouts/page.astro"
 title: "Uses"
-updatedDate: 2025-07-22
+updatedDate: 2026-03-18
 ---
 
 Is not all, but relevant or I'm loving it
@@ -25,19 +25,19 @@ Is not all, but relevant or I'm loving it
 - Apple Calendar
 - Apple Notes
 - [Things](https://culturedcode.com/things/)
+- [Raycast](https://www.raycast.com)
 - [Cursor](https://www.cursor.com/)
+- [Claude Code](https://code.claude.com)
 - [Obsidian](https://obsidian.md/)
 - [Linear](https://linear.app/)
 - [Figma](https://www.figma.com/)
 - [Sketch](https://www.sketch.com/)
 - [Spotify](https://spotify.com/)
-- [1Password](https://1password.com/)
+- [Bitwarden](https://bitwarden.com)
 - [Affinity Studio](https://www.affinity.studio/)
 
 ## Tools
 
-- [OpenAI](https://openai.com/)
-- [Anthropic](https://www.anthropic.com/)
 - [Next.js](https://nextjs.org/)
 - [Astro](https://astro.build/)
 - [Shopify](https://www.shopify.com/)

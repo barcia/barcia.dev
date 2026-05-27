@@ -3,7 +3,7 @@
 	"type": "module",
 	"private": true,
 	"engines": {
-		"node": ">=22.0.0"
+		"node": "26"
 	},
 	"scripts": {
 		"dev": "astro dev",
@@ -17,21 +17,21 @@
 		"lint": "astro check && biome check --write"
 	},
 	"dependencies": {
-		"@astrojs/check": "^0.9.8",
+		"@astrojs/check": "^0.9.9",
 		"@fontsource/ibm-plex-mono": "^5.2.7",
-		"astro": "^6.0.5",
-		"typescript": "^5.9.3"
+		"astro": "^6.3.8",
+		"typescript": "^6.0.3"
 	},
 	"devDependencies": {
-		"@astrojs/rss": "^4.0.17",
-		"@biomejs/biome": "2.4.7",
+		"@astrojs/rss": "^4.0.18",
+		"@biomejs/biome": "2.4.15",
 		"@tailwindcss/typography": "^0.5.19",
-		"@tailwindcss/vite": "^4.2.1",
-		"prettier": "^3.8.1",
+		"@tailwindcss/vite": "^4.3.0",
+		"prettier": "^3.8.3",
 		"prettier-plugin-astro": "^0.14.1",
 		"rehype-sanitize": "^6.0.0",
-		"sanitize-html": "^2.17.1",
-		"tailwindcss": "^4.2.1"
+		"sanitize-html": "^2.17.4",
+		"tailwindcss": "^4.3.0"
 	},
 	"prettier": {
 		"printWidth": 120,
@@ -46,6 +46,5 @@
 				}
 			}
 		]
-	},
-	"packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad"
+	}
 }

@@ -4,7 +4,6 @@ import "@/assets/styles/global.css";
 import { Font } from "astro:assets";
 import { Footer, Navbar } from "@/components/sections";
 
-
 const { class: className } = Astro.props;
 ---
 
@@ -20,10 +19,10 @@ const { class: className } = Astro.props;
 		/>
 		<meta name="format-detection" content="telephone=no" />
 		<ClientRouter />
-		<Font cssVariable="--font-geist-mono" />
+		<Font cssVariable="--font-inter" />
 	</head>
 	<body
-		class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 antialiased max-w-3xl box-content mx-auto min-h-dvh font-mono px-4 md:px-8 flex flex-col cursor-default"
+		class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50 antialiased max-w-3xl box-content mx-auto min-h-dvh font-sans px-4 md:px-8 flex flex-col cursor-default"
 	>
 		<Navbar />
 		<main class:list={["flex-1 w-full mx-auto", className]}>

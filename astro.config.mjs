@@ -6,11 +6,13 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
-	fonts: [{
-		provider: fontProviders.fontsource(),
-		name: "Geist Mono",
-		cssVariable: "--font-geist-mono",
-	}],
+	fonts: [
+		{
+			provider: fontProviders.fontsource(),
+			name: "Inter",
+			cssVariable: "--font-inter",
+		},
+	],
 	markdown: {
 		shikiConfig: {
 			themes: {

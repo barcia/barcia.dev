@@ -12,8 +12,14 @@ const updatedDateFormatted = updatedDate
 	: null;
 ---
 
-<Layout class="prose dark:prose-invert prose-headings:prose-base prose-headings:target:bg-amber-100 dark:prose-headings:target:bg-amber-950">
+<Layout
+	class="prose dark:prose-invert prose-headings:prose-base prose-headings:target:bg-amber-100 dark:prose-headings:target:bg-amber-950"
+>
 	<h1>{title}</h1>
-	{updatedDateFormatted && <p class="text-sm text-gray-400 dark:text-gray-500">Last updated: {updatedDateFormatted}</p>}
+	{
+		updatedDateFormatted && (
+			<p class="text-sm text-gray-400 dark:text-gray-500">Last updated: {updatedDateFormatted}</p>
+		)
+	}
 	<slot />
 </Layout>

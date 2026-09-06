@@ -5,8 +5,8 @@ const { pathname } = Astro.url;
 const isActive = (url: string) => pathname.split("/")[1] === url.split("/")[1];
 ---
 
-<nav class="py-6 mb-6 md:mb-16">
-	<ul class="flex gap-8 justify-end">
+<nav class="mb-6 py-6 md:mb-16">
+	<ul class="flex justify-end gap-8">
 		{
 			NAV_MAIN.map((item) => (
 				<li>

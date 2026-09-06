@@ -1,0 +1,5 @@
+pnpm-lock.yaml
+
+# Prose is written by hand. Prettier would rewrite emphasis markers and
+# paragraph wrapping for no gain, so page Markdown is left alone.
+src/pages/*.md

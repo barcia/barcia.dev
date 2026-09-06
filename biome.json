@@ -6,30 +6,15 @@
 		"useIgnoreFile": true
 	},
 	"files": {
-		"ignoreUnknown": false
+		"includes": ["**", "!pnpm-lock.yaml", "!**/*.svg"]
 	},
 	"formatter": {
-		"enabled": true,
-		"indentStyle": "tab"
+		"enabled": false
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"preset": "recommended",
-			"correctness": {
-				"noUnusedVariables": "off",
-				"noUnusedImports": "off"
-			}
-		}
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "double"
-		}
-	},
-	"css": {
-		"parser": {
-			"tailwindDirectives": true
+			"preset": "recommended"
 		}
 	},
 	"assist": {
@@ -39,5 +24,33 @@
 				"organizeImports": "on"
 			}
 		}
-	}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"overrides": [
+		{
+			"includes": ["**/*.css"],
+			"linter": {
+				"rules": {
+					"complexity": {
+						"noImportantStyles": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["**/*.astro"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noUnusedImports": "off",
+						"noUnusedVariables": "off"
+					}
+				}
+			}
+		}
+	]
 }

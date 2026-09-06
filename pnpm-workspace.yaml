@@ -1,7 +1,10 @@
-# Pin exact versions on install (no ^ or ~ ranges)
+# Install exact versions: never write ^ or ~ ranges into package.json.
 saveExact: true
 
+# Refuse versions published less than 24 h ago (supply-chain guard).
+minimumReleaseAge: 1440
+
+# The only packages allowed to run install scripts.
 allowBuilds:
   esbuild: true
-  sharp: true
   workerd: true

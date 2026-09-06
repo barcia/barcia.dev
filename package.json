@@ -1,41 +1,45 @@
 {
 	"name": "barcia.dev",
 	"type": "module",
+	"version": "0.1.0",
 	"private": true,
-	"packageManager": "pnpm@11.25.0",
 	"engines": {
 		"node": ">=24"
 	},
+	"packageManager": "pnpm@12.3.4+sha512-lhqkH7B32joEpEHZ+OFevAyW2o73ELLrZ7+e58sGEOq9SPH9hfUc/+c4RnhfoPh8VqOocqHYk/hEZ0G1zORUVw==",
 	"scripts": {
 		"dev": "astro dev",
 		"dev:host": "astro dev --host",
-		"build": "astro check && astro build",
+		"build": "astro build",
 		"preview": "astro preview",
-		"astro": "astro",
-		"deploy": "pnpm run build && wrangler deploy",
-		"format": "prettier --write .",
-		"lint:astro": "astro check",
-		"lint:biome": "biome check",
-		"lint": "astro check && biome check --write"
+		"preview:worker": "astro build && wrangler dev",
+		"check": "astro check && biome check && prettier --check .",
+		"format": "biome check --write && prettier --write .",
+		"deploy": "pnpm run check && astro build && wrangler deploy",
+		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/check": "0.9.10",
-		"astro": "7.3.1",
-		"typescript": "6.0.3"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.5.12",
 		"@tailwindcss/typography": "0.5.20",
 		"@tailwindcss/vite": "4.3.3",
+		"astro": "7.3.1",
+		"tailwindcss": "4.3.3"
+	},
+	"devDependencies": {
+		"@astrojs/check": "0.9.10",
+		"@biomejs/biome": "2.5.12",
 		"prettier": "3.9.6",
 		"prettier-plugin-astro": "0.14.1",
-		"tailwindcss": "4.3.3",
+		"prettier-plugin-tailwindcss": "0.8.1",
+		"typescript": "6.0.3",
 		"wrangler": "4.129.0"
 	},
 	"prettier": {
-		"printWidth": 120,
+		"useTabs": true,
+		"tabWidth": 2,
+		"printWidth": 100,
 		"plugins": [
-			"prettier-plugin-astro"
+			"prettier-plugin-astro",
+			"prettier-plugin-tailwindcss"
 		],
 		"overrides": [
 			{

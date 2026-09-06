@@ -1,0 +1,10 @@
+---
+import Layout from "@/components/layouts/main.astro";
+import { ROUTES } from "@/site.config";
+---
+
+<Layout class="prose dark:prose-invert">
+	<h1>Page not found</h1>
+	<p>That page does not exist, or it moved somewhere else.</p>
+	<p><a href={ROUTES.home}>Back home</a></p>
+</Layout>

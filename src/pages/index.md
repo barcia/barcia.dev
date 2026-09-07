@@ -18,7 +18,8 @@ I'm always looking for opportunities to collaborate on inspiring projects. Let's
 FC Barcelona, GitHub, Tifin, Meliã, Levante UD, AiKit, RedRadix, Grow, OpositaTest.
 
 ## Projects
-- [Darkview](https://darkview.barcia.dev) - A native macOS photo viewer and importer
+
+- ![Darkview icon](/images/project-icons/darkview.png) [Darkview](https://darkview.barcia.dev) - A native macOS photo viewer and importer
 
 ## Get in touch
 

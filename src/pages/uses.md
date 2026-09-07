@@ -22,8 +22,8 @@ Is not all, but relevant or I'm loving it
 
 ## Software
 
-- ![Apple Calendar icon](/images/tool-icons/apple-calendar.png) Apple Calendar
-- ![Apple Notes icon](/images/tool-icons/apple-notes.png) Apple Notes
+- ![Apple Calendar icon](/images/tool-icons/apple-calendar.png) [Apple Calendar](https://apps.apple.com/app/calendar/id1108185179)
+- ![Apple Notes icon](/images/tool-icons/apple-notes.png) [Apple Notes](https://apps.apple.com/app/notes/id1110145109)
 - ![Things icon](/images/tool-icons/things.png) [Things](https://culturedcode.com/things/)
 - ![Raycast icon](/images/tool-icons/raycast.png) [Raycast](https://www.raycast.com)
 - ![Obsidian icon](/images/tool-icons/obsidian.png) [Obsidian](https://obsidian.md/)

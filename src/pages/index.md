@@ -20,6 +20,7 @@ FC Barcelona, GitHub, Tifin, Meliã, Levante UD, AiKit, RedRadix, Grow, OpositaT
 ## Projects
 
 - ![Darkview icon](/images/project-icons/darkview.png) [Darkview](https://darkview.barcia.dev) - A native macOS photo viewer and importer
+- ![Garmin MCP icon](/images/project-icons/garmin-mcp.png) [Garmin MCP](https://github.com/barcia/garmin-mcp) - An MCP server to ask Claude about your Garmin health and training data
 
 ## Get in touch
 

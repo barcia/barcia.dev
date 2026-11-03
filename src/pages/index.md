@@ -21,6 +21,7 @@ FC Barcelona, GitHub, Tifin, Meliã, Levante UD, AiKit, RedRadix, Grow, OpositaT
 
 - ![Darkview icon](/images/project-icons/darkview.png) [Darkview](https://darkview.barcia.dev) - A native macOS photo viewer and importer
 - ![Garmin MCP icon](/images/project-icons/garmin-mcp.png) [Garmin MCP](https://github.com/barcia/garmin-mcp) - An MCP server to ask Claude about your Garmin health and training data
+- ![X Mount Lenses icon](/images/project-icons/fujix.png) [X Mount Lenses](https://fujix.barcia.dev) - A catalogue of every lens for the Fujifilm X mount
 
 ## Get in touch
 

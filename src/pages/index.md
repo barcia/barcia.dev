@@ -16,7 +16,7 @@ Here's where I can help:
 - **Join your product team** as a product engineer, full-time or part-time.
 - **Build your product** from the first idea to production: the interface, the frontend and what's behind it.
 - **Take your UI further:** design systems, complex products made simple, and closing the gap between design and code.
-- **Bring AI into how you work:** designing and implementing AI workflows, from agentic development setups for engineering teams (harnesses like Claude Code or Cursor, agents, MCP and skills) to MCP servers and integrations that connect AI to your tools and data.
+- **Bring AI into how you work:** designing and implementing AI workflows, from agentic development setups for engineering teams (harnesses, agents, MCP and skills) to MCP servers and integrations that connect AI to your tools and data.
 - **Online stores on Shopify,** like the ones I built for FC Barcelona and Levante UD.
 
 I like software that's simple and well made: clear interfaces, solid foundations and nothing it doesn't need.
@@ -102,8 +102,6 @@ Online exam-prep platform for public service exams in Spain.
 
 ## Get in touch
 
+- [ivan@barcia.dev](mailto:ivan@barcia.dev)
 - [LinkedIn](https://www.linkedin.com/in/ivanbarcia/)
 - [GitHub](https://github.com/barcia)
-- [Figma](https://www.figma.com/@barcia)
-- [X](https://x.com/ivarcia)
-- [Bluesky](https://bsky.app/profile/barcia.dev)

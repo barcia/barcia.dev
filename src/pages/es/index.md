@@ -16,7 +16,7 @@ En esto puedo ayudarte:
 - **Reforzar tu equipo de producto** como product engineer, a jornada completa o parcial.
 - **Construir tu producto** desde la primera idea hasta producción: la interfaz, el frontend y lo que hay detrás.
 - **Llevar tu UI más lejos:** sistemas de diseño, productos complejos que resulten sencillos y menos distancia entre el diseño y el código.
-- **Incorporar la IA a tu forma de trabajar:** diseñar e implantar flujos de trabajo con IA, desde entornos de desarrollo con agentes para equipos de ingeniería (harness como Claude Code o Cursor, agentes, MCPs y skills) hasta servidores MCP e integraciones que conectan la IA con tus herramientas y tus datos.
+- **Incorporar la IA a tu forma de trabajar:** diseñar e implantar flujos de trabajo con IA, desde entornos de desarrollo con agentes para equipos de ingeniería (harness, agentes, MCPs y skills) hasta servidores MCP e integraciones que conectan la IA con tus herramientas y tus datos.
 - **Tiendas online en Shopify,** como las que hice para el FC Barcelona y el Levante UD.
 
 Me gusta el software sencillo y bien hecho: interfaces claras, bases sólidas y nada que sobre.
@@ -102,8 +102,6 @@ Plataforma online para preparar oposiciones.
 
 ## Contacto
 
+- [ivan@barcia.dev](mailto:ivan@barcia.dev)
 - [LinkedIn](https://www.linkedin.com/in/ivanbarcia/)
 - [GitHub](https://github.com/barcia)
-- [Figma](https://www.figma.com/@barcia)
-- [X](https://x.com/ivarcia)
-- [Bluesky](https://bsky.app/profile/barcia.dev)

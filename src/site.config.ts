@@ -1,4 +1,4 @@
-import { route } from "@/utils/routes";
+import type { UIKey } from "@/i18n";
 
 export const ROUTES = {
 	home: "/",
@@ -7,28 +7,33 @@ export const ROUTES = {
 	uses: "/uses",
 } as const;
 
-export const NAV_MAIN = [
+export type RouteName = keyof typeof ROUTES;
+
+type NavItem = { label: UIKey; route: RouteName; hash?: UIKey };
+
+export const NAV_MAIN: NavItem[] = [
 	{
-		label: "work",
-		url: route("home"),
+		label: "nav.work",
+		route: "home",
 	},
 	{
-		label: "about",
-		url: route("about"),
+		label: "nav.about",
+		route: "about",
 	},
 	{
-		label: "now",
-		url: route("now"),
+		label: "nav.now",
+		route: "now",
 	},
 ];
 
-export const NAV_FOOTER = [
+export const NAV_FOOTER: NavItem[] = [
 	{
-		label: "contact",
-		url: route("home", undefined, ["#get-in-touch"]),
+		label: "nav.contact",
+		route: "home",
+		hash: "home.contactId",
 	},
 	{
-		label: "uses",
-		url: route("uses"),
+		label: "nav.uses",
+		route: "uses",
 	},
 ];

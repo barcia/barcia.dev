@@ -5,10 +5,160 @@
 	--font-sans: var(--font-inter);
 }
 
-.prose img[alt$=" icon"] {
+.prose img[src^="/images/tool-icons/"] {
 	display: inline-block;
 	width: 1.5rem;
 	height: 1.5rem;
 	margin: 0 0.25rem 0 0;
 	vertical-align: -0.4rem;
+}
+
+/*
+ * Experience: native <details> collapsibles. Colours come from the prose
+ * variables, so `prose-invert` handles dark mode.
+ */
+.prose details {
+	--details-duration: 200ms;
+	--details-easing: cubic-bezier(0.2, 0, 0, 1);
+
+	border-top: 1px solid var(--tw-prose-hr);
+	interpolate-size: allow-keywords;
+}
+
+.prose details:last-of-type {
+	border-bottom: 1px solid var(--tw-prose-hr);
+}
+
+.prose details[open] {
+	padding-bottom: 1.25rem;
+}
+
+.prose summary {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-areas:
+		"company marker"
+		"role marker"
+		"dates marker";
+	column-gap: 1.5rem;
+	align-items: center;
+	padding-block: 1rem;
+	list-style: none;
+	cursor: pointer;
+	border-radius: 0.25rem;
+}
+
+.prose summary::-webkit-details-marker {
+	display: none;
+}
+
+.prose summary:focus-visible {
+	outline: 2px solid var(--tw-prose-links);
+	outline-offset: 4px;
+}
+
+/* Chevron, flipped while open */
+.prose summary::after {
+	grid-area: marker;
+	content: "";
+	width: 0.875rem;
+	height: 0.875rem;
+	background-color: var(--tw-prose-captions);
+	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+		center / contain no-repeat;
+	transition:
+		rotate var(--details-duration) var(--details-easing),
+		background-color var(--details-duration) var(--details-easing);
+}
+
+.prose summary:hover::after,
+.prose details[open] > summary::after {
+	background-color: var(--tw-prose-headings);
+}
+
+.prose details[open] > summary::after {
+	rotate: 180deg;
+}
+
+.prose .job-company {
+	grid-area: company;
+	font-weight: 600;
+	color: var(--tw-prose-headings);
+}
+
+.prose .job-role {
+	grid-area: role;
+}
+
+.prose .job-dates {
+	grid-area: dates;
+	font-size: 0.875em;
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+	color: var(--tw-prose-captions);
+}
+
+.prose .job-location {
+	font-size: 0.875em;
+	color: var(--tw-prose-captions);
+}
+
+.prose details > summary + * {
+	margin-top: 0;
+}
+
+.prose details > :last-child {
+	margin-bottom: 0;
+}
+
+@media (min-width: 40rem) {
+	.prose summary {
+		grid-template-columns: 1fr auto auto;
+		grid-template-areas:
+			"company dates marker"
+			"role dates marker";
+	}
+}
+
+/* Content fades in and settles a few pixels down when it opens */
+.prose details[open] > :not(summary) {
+	animation: details-reveal var(--details-duration) var(--details-easing);
+}
+
+@keyframes details-reveal {
+	from {
+		opacity: 0;
+		translate: 0 -0.25rem;
+	}
+}
+
+/* Where the browser can animate to `auto`, the height follows, both ways */
+@supports (interpolate-size: allow-keywords) {
+	.prose details {
+		transition: padding-bottom var(--details-duration) var(--details-easing);
+	}
+
+	.prose details::details-content {
+		block-size: 0;
+		overflow-y: clip;
+		transition:
+			block-size var(--details-duration) var(--details-easing),
+			content-visibility var(--details-duration) allow-discrete;
+	}
+
+	.prose details[open]::details-content {
+		block-size: auto;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.prose details,
+	.prose details::details-content,
+	.prose summary::after {
+		transition: none;
+	}
+
+	.prose details[open] > :not(summary) {
+		animation: none;
+	}
 }

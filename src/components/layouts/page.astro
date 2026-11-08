@@ -1,10 +1,14 @@
 ---
 import Layout from "@/components/layouts/main.astro";
+import { getLocale, useTranslations } from "@/i18n";
 
 const { title, updatedDate } = Astro.props.frontmatter || Astro.props;
 
+const locale = getLocale(Astro.currentLocale);
+const t = useTranslations(locale);
+
 const updatedDateFormatted = updatedDate
-	? new Date(updatedDate).toLocaleDateString("en-US", {
+	? new Date(updatedDate).toLocaleDateString(locale, {
 			year: "numeric",
 			month: "long",
 			day: "2-digit",
@@ -18,7 +22,9 @@ const updatedDateFormatted = updatedDate
 	<h1>{title}</h1>
 	{
 		updatedDateFormatted && (
-			<p class="text-sm text-gray-400 dark:text-gray-500">Last updated: {updatedDateFormatted}</p>
+			<p class="text-sm text-gray-400 dark:text-gray-500">
+				{t("page.updated")} {updatedDateFormatted}
+			</p>
 		)
 	}
 	<slot />

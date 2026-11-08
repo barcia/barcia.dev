@@ -1,6 +1,6 @@
 # barcia.dev
 
-Personal site of Iván Barcia, UI Engineer. Static [Astro](https://astro.build)
+Personal site of Iván Barcia, Product Engineer. Static [Astro](https://astro.build)
 build, served from [Cloudflare Workers Static Assets](https://developers.cloudflare.com/workers/static-assets/).
 
 Live at **[barcia.dev](https://barcia.dev)**.
@@ -40,14 +40,16 @@ version this repo expects.
 
 ## Structure
 
-| Path                       | What lives there                                 |
-| :------------------------- | :----------------------------------------------- |
-| `src/pages/*.md`           | The pages themselves — home, about, now, uses    |
-| `src/pages/404.astro`      | Not-found page                                   |
-| `src/site.config.ts`       | Routes and navigation entries                    |
-| `src/components/layouts/`  | `main.astro` shell, `page.astro` Markdown layout |
-| `src/components/sections/` | Navbar and footer                                |
-| `src/assets/styles/`       | Tailwind entry point and theme                   |
+| Path                       | What lives there                                   |
+| :------------------------- | :------------------------------------------------- |
+| `src/pages/*.md`           | English pages, served from `/`: home, about, now…  |
+| `src/pages/es/*.md`        | Spanish pages, served from `/es/`                  |
+| `src/pages/404.astro`      | Not-found page (plus `es/404.astro`)               |
+| `src/site.config.ts`       | Routes and navigation entries                      |
+| `src/i18n/`                | Locales, interface strings and i18n helpers        |
+| `src/components/layouts/`  | `main.astro` shell, `page.astro` Markdown layout   |
+| `src/components/sections/` | Navbar (with the language switcher) and footer     |
+| `src/assets/styles/`       | Tailwind entry point, theme and Experience styling |
 
 Pages are plain Markdown. Each one points at the layout through front matter and
 carries a `title`, plus an optional `updatedDate` rendered under the heading:
@@ -60,8 +62,32 @@ updatedDate: 2026-05-01
 ---
 ```
 
-To add a page, drop the Markdown file in `src/pages/` and register its path in
-`ROUTES` in `src/site.config.ts` so navigation and links stay type-checked.
+To add a page, drop the Markdown file in `src/pages/`, add its translation at
+the same path under `src/pages/es/`, and register its path in `ROUTES` in
+`src/site.config.ts` so navigation and links stay type-checked.
+
+## Languages
+
+English is the default locale and has no prefix; Spanish lives under `/es/`.
+Routing uses Astro's built-in [i18n](https://docs.astro.build/en/guides/internationalization/),
+configured from `src/i18n/config.ts`. Both languages share the same slugs
+(`/about/`, `/es/about/`), which is what lets the language switcher and the
+`hreflang` alternates map one page onto the other.
+
+- Page copy lives in the Markdown files. Interface strings (meta title and
+  description, navigation, footer) live in `src/i18n/ui.ts`, typed so every
+  locale has every key.
+- Build links with `route("about", locale)` from `@/utils`, never by hand.
+- In Markdown, link to the localized path directly: `/es/uses`, not `/uses`.
+- Each locale has its own `404` page. A build hook in `astro.config.mjs` moves
+  `es/404/index.html` to `es/404.html`, the file Cloudflare looks for.
+- The footer's contact link points at a heading id that differs by language
+  (`#get-in-touch`, `#contacto`), so it comes from `home.contactId` in `ui.ts`.
+  Rename the heading and you rename the id.
+
+The Experience entries are native `<details>` written as HTML inside the
+Markdown. Keep the blank lines around the body so it is still parsed as
+Markdown, and the `job-*` classes on the summary, which `global.css` styles.
 
 ## Deployment
 

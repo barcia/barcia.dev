@@ -1,8 +1,19 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getLocale, LOCALES, stripLocale, ui, useTranslations } from "@/i18n";
 import { NAV_MAIN } from "@/site.config";
+import { isActiveRoute, route } from "@/utils";
 
 const { pathname } = Astro.url;
-const isActive = (url: string) => pathname.split("/")[1] === url.split("/")[1];
+const locale = getLocale(Astro.currentLocale);
+const t = useTranslations(locale);
+
+// Same page in every other language.
+const alternates = LOCALES.filter((other) => other !== locale).map((other) => ({
+	locale: other,
+	url: getRelativeLocaleUrl(other, stripLocale(pathname)),
+	name: ui[other]["lang.name"],
+}));
 ---
 
 <nav class="mb-6 py-6 md:mb-16">
@@ -10,8 +21,26 @@ const isActive = (url: string) => pathname.split("/")[1] === url.split("/")[1];
 		{
 			NAV_MAIN.map((item) => (
 				<li>
-					<a class:list={["no-underline", { "font-bold": isActive(item.url) }]} href={item.url}>
-						{item.label}
+					<a
+						class:list={["no-underline", { "font-bold": isActiveRoute(pathname, item.route) }]}
+						href={route(item.route, locale)}
+					>
+						{t(item.label)}
+					</a>
+				</li>
+			))
+		}
+		{
+			alternates.map((alternate) => (
+				<li>
+					<a
+						class="text-gray-400 no-underline transition-colors hover:text-gray-900 dark:text-gray-500 dark:hover:text-gray-50"
+						href={alternate.url}
+						hreflang={alternate.locale}
+						lang={alternate.locale}
+						aria-label={alternate.name}
+					>
+						{alternate.locale}
 					</a>
 				</li>
 			))

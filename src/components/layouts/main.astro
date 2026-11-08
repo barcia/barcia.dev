@@ -2,21 +2,31 @@
 import { ClientRouter } from "astro:transitions";
 import "@/assets/styles/global.css";
 import { Font } from "astro:assets";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
 import { Footer, Navbar } from "@/components/sections";
+import { DEFAULT_LOCALE, getLocale, LOCALES, stripLocale, useTranslations } from "@/i18n";
 
 const { class: className } = Astro.props;
+
+const locale = getLocale(Astro.currentLocale);
+const t = useTranslations(locale);
+const path = stripLocale(Astro.url.pathname);
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang={locale} class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Iván Barcia | UI Engineer</title>
-		<meta
-			name="description"
-			content="Iván Barcia is a UI Engineer and Frontend Developer based in Santiago de Compostela, Spain."
-		/>
+		<title>{t("meta.title")}</title>
+		<meta name="description" content={t("meta.description")} />
+		<link rel="canonical" href={getAbsoluteLocaleUrl(locale, path)} />
+		{
+			LOCALES.map((alternate) => (
+				<link rel="alternate" hreflang={alternate} href={getAbsoluteLocaleUrl(alternate, path)} />
+			))
+		}
+		<link rel="alternate" hreflang="x-default" href={getAbsoluteLocaleUrl(DEFAULT_LOCALE, path)} />
 		<meta name="format-detection" content="telephone=no" />
 		<ClientRouter />
 		<Font cssVariable="--font-inter" />

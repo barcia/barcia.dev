@@ -1,20 +1,28 @@
 ---
+import { getLocale, useTranslations } from "@/i18n";
 import { NAV_FOOTER } from "@/site.config";
+import { isActiveRoute, route } from "@/utils";
 
 const { pathname } = Astro.url;
-
-const isActive = (url: string) => pathname.split("/")[1] === url.split("/")[1];
+const locale = getLocale(Astro.currentLocale);
+const t = useTranslations(locale);
 ---
 
 <footer class="mt-16 py-8 text-xs md:mt-32">
 	<div class="flex flex-col-reverse justify-between gap-3 md:flex-row">
-		<div class="">© 2026 HOB • handcrafting the web</div>
+		<div class="">© 2026 Iván Barcia · {t("footer.tagline")}</div>
 		<ul class="flex gap-8">
 			{
 				NAV_FOOTER.map((item) => (
 					<li>
-						<a href={item.url} class:list={["no-underline", { "font-bold": isActive(item.url) }]}>
-							{item.label}
+						<a
+							href={route(item.route, locale, item.hash && t(item.hash))}
+							class:list={[
+								"no-underline",
+								{ "font-bold": !item.hash && isActiveRoute(pathname, item.route) },
+							]}
+						>
+							{t(item.label)}
 						</a>
 					</li>
 				))

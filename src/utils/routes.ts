@@ -1,26 +1,16 @@
-import { ROUTES } from "@/site.config";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { DEFAULT_LOCALE, type Locale, stripLocale } from "@/i18n";
+import { ROUTES, type RouteName } from "@/site.config";
 
-export const route = (
-	path: keyof typeof ROUTES,
-	params?: Array<{ key: string; value: string }>,
-	urlExtras?: Array<string>,
-) => {
-	let route = ROUTES[path as keyof typeof ROUTES] as string;
+export const route = (path: RouteName, locale: Locale = DEFAULT_LOCALE, hash?: string) => {
+	const url = getRelativeLocaleUrl(locale, ROUTES[path]);
 
-	if (params) {
-		params.forEach((param) => {
-			route = route.replace(param.key, param.value);
-		});
-	}
-
-	if (urlExtras) {
-		urlExtras.forEach((extra) => {
-			route = route.concat(extra);
-		});
-	}
-
-	return route;
+	return hash ? `${url}#${hash}` : url;
 };
+
+/** Whether `pathname` (in any locale) belongs to the section of `path`. */
+export const isActiveRoute = (pathname: string, path: RouteName) =>
+	stripLocale(pathname).split("/")[1] === ROUTES[path].split("/")[1];
 
 export const absoluteRoute = (path: string) => {
 	const url = new URL(path, import.meta.env.SITE);

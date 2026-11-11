@@ -16,6 +16,6 @@ title: "Sobre mí"
 
 - Me apasiona la fotografía, sobre todo la documental. Paso mucho tiempo haciendo, revisando y estudiando fotos.
 - También me encanta correr por bosques y montañas, y de vez en cuando participo en carreras de trail.
-- Me interesa mucho el patrimonio local, sobre todo los petroglifos y el folclore. A veces hago a mano sombreros de paja y cestos de mimbre.
+- Me interesa mucho el patrimonio local, sobre todo el arte rupestre y el folclore.
 - Me encantan los mapas y estoy explorando la grabación de campo.
 - Puedes saber más de mis intereses personales en mi web, [ivan.gal](https://ivan.gal).
